@@ -29,7 +29,7 @@ namespace CQR
 
             try
             {
-                clienteCrudFactory.Create("");
+                clienteCrudFactory.Create(cliente);
                 Console.WriteLine("CONOCE");
             }
             catch (System.Data.SqlClient.SqlException ex)
