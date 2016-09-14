@@ -1,0 +1,7 @@
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.AccesoDatos\bin\Debug\CQR.AccesoDatos.dll
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.AccesoDatos\bin\Debug\CQR.AccesoDatos.pdb
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.AccesoDatos\bin\Debug\CQR.Entidades.dll
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.AccesoDatos\bin\Debug\CQR.Entidades.pdb
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.AccesoDatos\obj\Debug\CQR.AccesoDatos.csprojResolveAssemblyReference.cache
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.AccesoDatos\obj\Debug\CQR.AccesoDatos.dll
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.AccesoDatos\obj\Debug\CQR.AccesoDatos.pdb

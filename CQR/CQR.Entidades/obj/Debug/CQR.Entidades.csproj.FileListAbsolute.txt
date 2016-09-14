@@ -1,0 +1,5 @@
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.Entidades\bin\Debug\CQR.Entidades.dll
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.Entidades\bin\Debug\CQR.Entidades.pdb
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.csprojResolveAssemblyReference.cache
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.dll
+c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.pdb
