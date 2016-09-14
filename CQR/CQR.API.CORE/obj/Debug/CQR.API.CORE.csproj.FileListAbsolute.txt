@@ -1,0 +1,8 @@
+C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.API.CORE\bin\Debug\CQR.API.CORE.dll
+C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.API.CORE\bin\Debug\CQR.API.CORE.pdb
+C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.API.CORE\bin\Debug\CQR.AccesoDatos.dll
+C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.API.CORE\bin\Debug\CQR.Entidades.dll
+C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.API.CORE\bin\Debug\CQR.AccesoDatos.pdb
+C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.API.CORE\bin\Debug\CQR.Entidades.pdb
+C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.API.CORE\obj\Debug\CQR.API.CORE.dll
+C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.API.CORE\obj\Debug\CQR.API.CORE.pdb
