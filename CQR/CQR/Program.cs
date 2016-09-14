@@ -16,10 +16,10 @@ namespace CQR
 
             var cliente = new Cliente()
             {
-                Cedula = "207430945",
-                Nombre = "AstroFreakazoid",
-                Telefono = "62402974",
-                Correo = "jgomezc@ucenfotec.ac.cr",
+                Cedula = "007",
+                Nombre = "James Bon",
+                Telefono = "007",
+                Correo = "jbonds@ucenfotec.ac.cr",
                 Visitas = 0,
                 Premio = 0
             };
