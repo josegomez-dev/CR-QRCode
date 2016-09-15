@@ -22,358 +22,258 @@ Partial Class frmClientes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmClientes))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.btnActualizarTabla = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.cbxHabilitado = New System.Windows.Forms.CheckBox()
-        Me.btnRegistrar = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Nombre = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtPremio = New System.Windows.Forms.NumericUpDown()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtVisitas = New System.Windows.Forms.NumericUpDown()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
+        Me.txtCorreo = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.btnActualizar = New System.Windows.Forms.Button()
         Me.dgClientes = New System.Windows.Forms.DataGridView()
-        Me.QrCodeImgControl1 = New Gma.QrCodeNet.Encoding.Windows.Forms.QrCodeImgControl()
-        Me.btnGuardarImagen = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.PictureBox1 = New AForge.Controls.PictureBox()
+        Me.btnEliminar = New AForge.Controls.PictureBox()
         Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
+        Me.btnActualizarTabla.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtPremio, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtVisitas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgClientes, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.QrCodeImgControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.btnActualizarTabla)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 1)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(814, 449)
+        Me.TabControl1.Size = New System.Drawing.Size(814, 448)
         Me.TabControl1.TabIndex = 0
         '
-        'TabPage1
+        'btnActualizarTabla
         '
-        Me.TabPage1.Controls.Add(Me.GroupBox1)
-        Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.btnEliminar)
-        Me.TabPage1.Controls.Add(Me.btnActualizar)
-        Me.TabPage1.Controls.Add(Me.dgClientes)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(806, 423)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Clientes"
-        Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.Button3)
-        Me.TabPage2.Controls.Add(Me.Button2)
-        Me.TabPage2.Controls.Add(Me.btnGuardarImagen)
-        Me.TabPage2.Controls.Add(Me.QrCodeImgControl1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(806, 423)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Generador QR"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.btnActualizarTabla.Controls.Add(Me.PictureBox1)
+        Me.btnActualizarTabla.Controls.Add(Me.GroupBox1)
+        Me.btnActualizarTabla.Controls.Add(Me.btnEliminar)
+        Me.btnActualizarTabla.Controls.Add(Me.Label1)
+        Me.btnActualizarTabla.Controls.Add(Me.dgClientes)
+        Me.btnActualizarTabla.Location = New System.Drawing.Point(4, 22)
+        Me.btnActualizarTabla.Name = "btnActualizarTabla"
+        Me.btnActualizarTabla.Padding = New System.Windows.Forms.Padding(3)
+        Me.btnActualizarTabla.Size = New System.Drawing.Size(806, 422)
+        Me.btnActualizarTabla.TabIndex = 0
+        Me.btnActualizarTabla.Text = "CLIENTES"
+        Me.btnActualizarTabla.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnNuevo)
-        Me.GroupBox1.Controls.Add(Me.cbxHabilitado)
-        Me.GroupBox1.Controls.Add(Me.btnRegistrar)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.Nombre)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.NumericUpDown2)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.ForeColor = System.Drawing.Color.Crimson
-        Me.GroupBox1.Location = New System.Drawing.Point(29, 39)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label10)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.txtPremio)
+        Me.GroupBox1.Controls.Add(Me.txtNombre)
+        Me.GroupBox1.Controls.Add(Me.txtVisitas)
+        Me.GroupBox1.Controls.Add(Me.txtTelefono)
+        Me.GroupBox1.Controls.Add(Me.txtCorreo)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.GroupBox1.Location = New System.Drawing.Point(388, 26)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(234, 344)
-        Me.GroupBox1.TabIndex = 26
+        Me.GroupBox1.Size = New System.Drawing.Size(371, 117)
+        Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Formulario de Registro"
+        Me.GroupBox1.Text = "Formulario"
         '
-        'btnNuevo
+        'Label7
         '
-        Me.btnNuevo.Location = New System.Drawing.Point(198, 17)
-        Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(21, 27)
-        Me.btnNuevo.TabIndex = 18
-        Me.btnNuevo.Text = "+"
-        Me.btnNuevo.UseVisualStyleBackColor = True
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Label7.Location = New System.Drawing.Point(17, 26)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(77, 21)
+        Me.Label7.TabIndex = 27
+        Me.Label7.Text = "Nombre"
         '
-        'cbxHabilitado
+        'Label8
         '
-        Me.cbxHabilitado.AutoSize = True
-        Me.cbxHabilitado.Location = New System.Drawing.Point(105, 229)
-        Me.cbxHabilitado.Name = "cbxHabilitado"
-        Me.cbxHabilitado.Size = New System.Drawing.Size(79, 17)
-        Me.cbxHabilitado.TabIndex = 20
-        Me.cbxHabilitado.Text = "Habilitado?"
-        Me.cbxHabilitado.UseVisualStyleBackColor = True
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Label8.Location = New System.Drawing.Point(275, 68)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(55, 19)
+        Me.Label8.TabIndex = 36
+        Me.Label8.Text = "Premio"
         '
-        'btnRegistrar
+        'Label9
         '
-        Me.btnRegistrar.Location = New System.Drawing.Point(144, 295)
-        Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnRegistrar.TabIndex = 17
-        Me.btnRegistrar.Text = "Registrar"
-        Me.btnRegistrar.UseVisualStyleBackColor = True
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Label9.Location = New System.Drawing.Point(17, 56)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(80, 21)
+        Me.Label9.TabIndex = 28
+        Me.Label9.Text = "Telefono"
         '
-        'TextBox1
+        'Label10
         '
-        Me.TextBox1.Location = New System.Drawing.Point(82, 60)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 5
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Label10.Location = New System.Drawing.Point(275, 24)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(49, 19)
+        Me.Label10.TabIndex = 35
+        Me.Label10.Text = "Visitas"
         '
-        'Nombre
+        'Label11
         '
-        Me.Nombre.AutoSize = True
-        Me.Nombre.Location = New System.Drawing.Point(34, 63)
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.Size = New System.Drawing.Size(40, 13)
-        Me.Nombre.TabIndex = 6
-        Me.Nombre.Text = "Cedula"
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Label11.Location = New System.Drawing.Point(17, 86)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(67, 21)
+        Me.Label11.TabIndex = 29
+        Me.Label11.Text = "Correo"
         '
-        'TextBox2
+        'txtPremio
         '
-        Me.TextBox2.Location = New System.Drawing.Point(82, 86)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 7
+        Me.txtPremio.Location = New System.Drawing.Point(279, 90)
+        Me.txtPremio.Name = "txtPremio"
+        Me.txtPremio.Size = New System.Drawing.Size(72, 20)
+        Me.txtPremio.TabIndex = 34
         '
-        'Label6
+        'txtNombre
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(37, 190)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(39, 13)
-        Me.Label6.TabIndex = 16
-        Me.Label6.Text = "Premio"
+        Me.txtNombre.Location = New System.Drawing.Point(101, 29)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(154, 20)
+        Me.txtNombre.TabIndex = 30
         '
-        'Label3
+        'txtVisitas
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(32, 89)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 13)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Nombre"
+        Me.txtVisitas.Location = New System.Drawing.Point(279, 43)
+        Me.txtVisitas.Name = "txtVisitas"
+        Me.txtVisitas.Size = New System.Drawing.Size(72, 20)
+        Me.txtVisitas.TabIndex = 33
         '
-        'Label2
+        'txtTelefono
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(37, 166)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 13)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Visitas"
+        Me.txtTelefono.Location = New System.Drawing.Point(101, 59)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(154, 20)
+        Me.txtTelefono.TabIndex = 31
         '
-        'TextBox3
+        'txtCorreo
         '
-        Me.TextBox3.Location = New System.Drawing.Point(82, 112)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 9
-        '
-        'NumericUpDown2
-        '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(105, 190)
-        Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(77, 20)
-        Me.NumericUpDown2.TabIndex = 14
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(28, 115)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 13)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Telefono"
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(105, 164)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(77, 20)
-        Me.NumericUpDown1.TabIndex = 13
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(82, 138)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 11
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(36, 138)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(38, 13)
-        Me.Label5.TabIndex = 12
-        Me.Label5.Text = "Correo"
+        Me.txtCorreo.Location = New System.Drawing.Point(101, 89)
+        Me.txtCorreo.Name = "txtCorreo"
+        Me.txtCorreo.Size = New System.Drawing.Size(154, 20)
+        Me.txtCorreo.TabIndex = 32
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.Coral
-        Me.Label1.Location = New System.Drawing.Point(502, 56)
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Label1.Location = New System.Drawing.Point(25, 139)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(84, 13)
+        Me.Label1.Size = New System.Drawing.Size(146, 21)
         Me.Label1.TabIndex = 25
         Me.Label1.Text = "Lista de Clientes"
         '
-        'btnEliminar
-        '
-        Me.btnEliminar.Location = New System.Drawing.Point(610, 334)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
-        Me.btnEliminar.TabIndex = 24
-        Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = True
-        '
-        'btnActualizar
-        '
-        Me.btnActualizar.Location = New System.Drawing.Point(691, 334)
-        Me.btnActualizar.Name = "btnActualizar"
-        Me.btnActualizar.Size = New System.Drawing.Size(75, 23)
-        Me.btnActualizar.TabIndex = 23
-        Me.btnActualizar.Text = "Actualizar"
-        Me.btnActualizar.UseVisualStyleBackColor = True
-        '
         'dgClientes
         '
-        Me.dgClientes.BackgroundColor = System.Drawing.Color.Sienna
+        Me.dgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgClientes.BackgroundColor = System.Drawing.Color.CornflowerBlue
         Me.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgClientes.Location = New System.Drawing.Point(301, 72)
+        Me.dgClientes.Location = New System.Drawing.Point(29, 163)
         Me.dgClientes.Name = "dgClientes"
-        Me.dgClientes.Size = New System.Drawing.Size(476, 256)
+        Me.dgClientes.Size = New System.Drawing.Size(748, 207)
         Me.dgClientes.TabIndex = 22
         '
-        'QrCodeImgControl1
+        'TabPage2
         '
-        Me.QrCodeImgControl1.ErrorCorrectLevel = Gma.QrCodeNet.Encoding.ErrorCorrectionLevel.M
-        Me.QrCodeImgControl1.Image = CType(resources.GetObject("QrCodeImgControl1.Image"), System.Drawing.Image)
-        Me.QrCodeImgControl1.Location = New System.Drawing.Point(299, 111)
-        Me.QrCodeImgControl1.Name = "QrCodeImgControl1"
-        Me.QrCodeImgControl1.QuietZoneModule = Gma.QrCodeNet.Encoding.Windows.Render.QuietZoneModules.Two
-        Me.QrCodeImgControl1.Size = New System.Drawing.Size(177, 145)
-        Me.QrCodeImgControl1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.QrCodeImgControl1.TabIndex = 0
-        Me.QrCodeImgControl1.TabStop = False
-        Me.QrCodeImgControl1.Text = "QrCodeImgControl1"
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(806, 422)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "GENERADOR QR"
+        Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'btnGuardarImagen
+        'PictureBox1
         '
-        Me.btnGuardarImagen.Location = New System.Drawing.Point(299, 262)
-        Me.btnGuardarImagen.Name = "btnGuardarImagen"
-        Me.btnGuardarImagen.Size = New System.Drawing.Size(177, 23)
-        Me.btnGuardarImagen.TabIndex = 2
-        Me.btnGuardarImagen.Text = "Guardar Imagen"
-        Me.btnGuardarImagen.UseVisualStyleBackColor = True
+        Me.PictureBox1.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473957601_InterfaceExpendet_01
+        Me.PictureBox1.Location = New System.Drawing.Point(705, 376)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(33, 32)
+        Me.PictureBox1.TabIndex = 39
+        Me.PictureBox1.TabStop = False
         '
-        'Button2
+        'btnEliminar
         '
-        Me.Button2.Location = New System.Drawing.Point(299, 291)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(177, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(401, 82)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Generador"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnEliminar.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473950306_edit_delete
+        Me.btnEliminar.Location = New System.Drawing.Point(744, 376)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(33, 36)
+        Me.btnEliminar.TabIndex = 26
+        Me.btnEliminar.TabStop = False
         '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(814, 447)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmClientes"
         Me.Text = "frmClientes"
         Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
+        Me.btnActualizarTabla.ResumeLayout(False)
+        Me.btnActualizarTabla.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtPremio, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtVisitas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgClientes, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.QrCodeImgControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents btnNuevo As Button
-    Friend WithEvents cbxHabilitado As CheckBox
-    Friend WithEvents btnRegistrar As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Nombre As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents NumericUpDown2 As NumericUpDown
-    Friend WithEvents Label4 As Label
-    Friend WithEvents NumericUpDown1 As NumericUpDown
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label5 As Label
+    Friend WithEvents btnActualizarTabla As TabPage
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnEliminar As Button
-    Friend WithEvents btnActualizar As Button
     Friend WithEvents dgClientes As DataGridView
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents btnGuardarImagen As Button
-    Friend WithEvents QrCodeImgControl1 As Gma.QrCodeNet.Encoding.Windows.Forms.QrCodeImgControl
+    Friend WithEvents btnEliminar As AForge.Controls.PictureBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtPremio As NumericUpDown
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents txtVisitas As NumericUpDown
+    Friend WithEvents txtTelefono As TextBox
+    Friend WithEvents txtCorreo As TextBox
+    Friend WithEvents PictureBox1 As AForge.Controls.PictureBox
 End Class
