@@ -5,3 +5,10 @@ c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.AccesoDatos\bin\Deb
 c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.AccesoDatos\obj\Debug\CQR.AccesoDatos.csprojResolveAssemblyReference.cache
 c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.AccesoDatos\obj\Debug\CQR.AccesoDatos.dll
 c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.AccesoDatos\obj\Debug\CQR.AccesoDatos.pdb
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.AccesoDatos\bin\Debug\CQR.AccesoDatos.dll
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.AccesoDatos\bin\Debug\CQR.AccesoDatos.pdb
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.AccesoDatos\bin\Debug\CQR.Entidades.dll
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.AccesoDatos\bin\Debug\CQR.Entidades.pdb
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.AccesoDatos\obj\Debug\CQR.AccesoDatos.csprojResolveAssemblyReference.cache
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.AccesoDatos\obj\Debug\CQR.AccesoDatos.dll
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.AccesoDatos\obj\Debug\CQR.AccesoDatos.pdb
