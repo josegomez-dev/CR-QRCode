@@ -84,4 +84,36 @@ Public Class frmClientes
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         cargar_tablaClientes()
     End Sub
+
+    Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
+
+        Dim gestor As New GestorCliente(user)
+        Dim cliente As New Cliente
+
+        Dim rowIndex As Integer = dgClientes.CurrentRow.Index
+        Dim primaryKey As String = dgClientes.Item(0, rowIndex).Value
+
+        Try
+
+            cliente = gestor.RetrievePorId(primaryKey)
+
+            cliente.Nombre = txtNombre.Text
+            cliente.Telefono = txtTelefono.Text
+            cliente.Correo = txtCorreo.Text
+            cliente.Visitas = txtVisitas.Value
+            cliente.Premio = txtPremio.Value
+
+            gestor.Update(cliente)
+
+            MsgBox("Cliente actualizado con exito", MsgBoxStyle.Information)
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+
+        End Try
+
+        cargar_tablaClientes()
+
+    End Sub
 End Class
