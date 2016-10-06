@@ -33,9 +33,13 @@ Public Class frmRegistrarCliente
         cl.Premio = txtPremio.Value
 
         Try
+
             gestor.Create(cl)
             MsgBox("Cliente registrado con exito", MsgBoxStyle.Information)
+
         Catch ex As Exception
+
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
 
         End Try
 
@@ -53,4 +57,5 @@ Public Class frmRegistrarCliente
         End If
         img.Dispose()
     End Sub
+
 End Class

@@ -38,4 +38,9 @@ Public Class frmEscaner
         End If
     End Sub
 
+    Private Sub Form_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+        Timer1.Enabled = False
+        vspEscaner.Stop()
+    End Sub
+
 End Class
