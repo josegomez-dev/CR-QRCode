@@ -17,9 +17,13 @@ Public Class frmClientes
         Dim data_table As String() = {"Cedula", "Nombre", "Telefono", "Correo", "Visitas", "Premio"}
         buildTableData(dgClientes, data_table)
 
-        For Each item In lst
-            dgClientes.Rows.Add(item.Cedula, item.Nombre, item.Telefono, item.Correo, item.Visitas, item.Premio)
-        Next
+        If lst IsNot Nothing Then
+
+            For Each item In lst
+                dgClientes.Rows.Add(item.Cedula, item.Nombre, item.Telefono, item.Correo, item.Visitas, item.Premio)
+            Next
+
+        End If
 
         Return 0
     End Function

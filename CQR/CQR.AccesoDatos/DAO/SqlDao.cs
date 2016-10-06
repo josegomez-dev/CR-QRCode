@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace CQR.AccesoDatos.DAO
 {
@@ -47,27 +48,35 @@ namespace CQR.AccesoDatos.DAO
                     command.Parameters.Add(param);
                 }
 
-                conn.Open();
-                var reader = command.ExecuteReader();//Ejecuta una lectura.
-                if (reader.HasRows)//si hay filas
+                try
                 {
-                    while (reader.Read())
-                    {
-                        //Dictionary es como un hashmap en java <key,value>
-                        var dict = new Dictionary<string, object>();
+                    conn.Open();
 
-                        for (var lp = 0; lp < reader.FieldCount; lp++)
+                    var reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
                         {
-                            dict.Add(reader.GetName(lp), reader.GetValue(lp));
+                            var dict = new Dictionary<string, object>();
+
+                            for (var lp = 0; lp < reader.FieldCount; lp++)
+                            {
+                                dict.Add(reader.GetName(lp), reader.GetValue(lp));
+                            }
+                            lstResult.Add(dict);
                         }
-                        lstResult.Add(dict);
                     }
+
                 }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("La base de datos esta desconectada");
+                    MessageBox.Show(ex.Message);
+                }
+                
             }
 
             return lstResult;
-
-
         }
 
         public static bool ExecuteQueryProcedureBoolean(SqlOperation sqlOperation)

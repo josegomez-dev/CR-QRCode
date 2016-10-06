@@ -3,3 +3,8 @@ c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.Entidades\bin\Debug
 c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.csprojResolveAssemblyReference.cache
 c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.dll
 c:\users\alego\documents\visual studio 2015\Projects\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.pdb
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.Entidades\bin\Debug\CQR.Entidades.dll
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.Entidades\bin\Debug\CQR.Entidades.pdb
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.dll
+C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.pdb
