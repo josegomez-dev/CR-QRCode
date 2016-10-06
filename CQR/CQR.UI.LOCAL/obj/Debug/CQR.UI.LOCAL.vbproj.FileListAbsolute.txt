@@ -9,7 +9,6 @@ C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\bin\Debug\CQR.API
 C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\bin\Debug\CQR.Entidades.pdb
 C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\bin\Debug\CQR.AccesoDatos.pdb
 C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCAL.vbprojResolveAssemblyReference.cache
-C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCAL.Form1.resources
 C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCAL.Resources.resources
 C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCAL.vbproj.GenerateResource.Cache
 C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCAL.exe
@@ -35,3 +34,5 @@ C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.
 C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\bin\Debug\Gma.QrCodeNet.Encoding.dll
 C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\bin\Debug\Gma.QrCodeNet.Encoding.pdb
 C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\bin\Debug\Gma.QrCodeNet.Encoding.xml
+C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCAL.frmRegistrarCliente.resources
+C:\Users\alego\Documents\GitHub\PuntoDeVentas\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCAL.frmEmpresa.resources

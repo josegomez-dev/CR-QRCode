@@ -28,12 +28,14 @@ Public Class frmEscaner
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If vspEscaner.GetCurrentVideoFrame() IsNot Nothing Then
-            Dim img As New Bitmap(vspEscaner.GetCurrentVideoFrame)
+            Dim img As New Bitmap(vspEscaner.GetCurrentVideoFrame())
             Dim resultados As String() = BarcodeReader.read(img, BarcodeReader.QRCODE)
             img.Dispose()
             If resultados IsNot Nothing AndAlso resultados.Count > 0 Then
-                ListBox1.Items.Add(resultados(0))
+                lstboxCodigos.Items.Add(resultados(0))
+                MsgBox(resultados(0))
             End If
         End If
     End Sub
+
 End Class

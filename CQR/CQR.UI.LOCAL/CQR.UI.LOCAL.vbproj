@@ -92,17 +92,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmClientes.Designer.vb">
       <DependentUpon>frmClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="frmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpresa.Designer.vb">
+      <DependentUpon>frmEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpresa.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEscaner.Designer.vb">
@@ -115,6 +114,12 @@
       <DependentUpon>frmMenuPrincipal.vb</DependentUpon>
     </Compile>
     <Compile Include="frmMenuPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarCliente.Designer.vb">
+      <DependentUpon>frmRegistrarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSplash.Designer.vb">
@@ -140,17 +145,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpresa.resx">
+      <DependentUpon>frmEmpresa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEscaner.resx">
       <DependentUpon>frmEscaner.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarCliente.resx">
+      <DependentUpon>frmRegistrarCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.vb</DependentUpon>
@@ -195,6 +203,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Coyote-Car-Wash-final-RGB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1473947706_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1473950306_edit-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1473950454_bookmark-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1473955524_InterfaceExpendet-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1473957601_InterfaceExpendet-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1473957825_icon-130-cloud-upload.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
