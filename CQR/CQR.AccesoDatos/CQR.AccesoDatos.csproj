@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="CRUD\Base\CrudFactory.cs" />
     <Compile Include="CRUD\ClienteCrudFactory.cs" />
+    <Compile Include="CRUD\EmpresaCrudFactory.cs" />
     <Compile Include="CRUD\MensajeCrudFactory.cs" />
+    <Compile Include="CRUD\ServicioCrudFactory.cs" />
     <Compile Include="DAO\SqlDao.cs" />
     <Compile Include="DAO\SqlOperation.cs" />
     <Compile Include="Exceptions\GestorExcepcion.cs" />
@@ -51,7 +53,10 @@
     <Compile Include="Mapper\Base\IObjectMapper.cs" />
     <Compile Include="Mapper\Base\ISqlStament.cs" />
     <Compile Include="Mapper\ClienteMapper.cs" />
+    <Compile Include="Mapper\EmpresaMapper.cs" />
+    <Compile Include="Mapper\IObject.cs" />
     <Compile Include="Mapper\MensajeMapper.cs" />
+    <Compile Include="Mapper\ServicioMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

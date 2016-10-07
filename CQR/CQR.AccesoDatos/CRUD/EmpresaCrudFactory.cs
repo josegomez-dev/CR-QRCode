@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace CQR.AccesoDatos.CRUD
 {
-    public class ClienteCrudFactory : CrudFactory
+    public class EmpresaCrudFactory : CrudFactory
     {
-        private ClienteMapper _mapper;
+        private EmpresaMapper _mapper;
 
-        public ClienteCrudFactory()
+        public EmpresaCrudFactory()
         {
-            _mapper = new ClienteMapper();
+            _mapper = new EmpresaMapper();
         }
         public override bool Create(EntidadBase entidad)
         {
@@ -35,7 +35,7 @@ namespace CQR.AccesoDatos.CRUD
                 AdministrarExcepcion(ex);
                 throw ex;
             }
-           
+
         }
 
         public override bool Delete(EntidadBase entidad)
@@ -51,7 +51,7 @@ namespace CQR.AccesoDatos.CRUD
                 throw ex;
             }
         }
-        
+
         public override EntidadBase RCreate(EntidadBase entidad)
         {
             throw new NotImplementedException();
@@ -125,6 +125,6 @@ namespace CQR.AccesoDatos.CRUD
                 throw ex;
             }
         }
-        
+
     }
 }

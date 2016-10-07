@@ -1,18 +1,15 @@
-﻿Public Class frmMenuPrincipal
+﻿Imports CQR.API.CORE.Gestores
+Imports CQR.Entidades
 
-    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs)
-        Call New frmClientes() With {.MdiParent = Me}.Show()
-    End Sub
+Public Class frmMenuPrincipal
+    Dim user As New Usuario()
 
     Private Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
         showScreen(New frmClientes)
     End Sub
 
-    Private Sub btnEscaner_MouseHover(ByVal sender As Object, ByVal e As EventArgs) Handles btnEscaner.MouseHover
-        btnEscaner.BackColor = Color.LightCyan
-    End Sub
-    Private Sub btnEscaner_MouseLeave(ByVal sender As Object, ByVal e As EventArgs) Handles btnEscaner.MouseLeave
-        btnEscaner.BackColor = Color.LightSeaGreen
+    Private Sub btnEmpresa_Click(sender As Object, e As EventArgs) Handles btnEmpresa.Click
+        showScreen(New frmEmpresa)
     End Sub
 
     Function showScreen(ByVal Xform As Form)
@@ -35,4 +32,23 @@
         Dim form As New frmEscaner()
         form.Show()
     End Sub
+
+    Private Sub frmMenuPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Dim gestor As New GestorEmpresa(user)
+        Dim empresa As New Empresa()
+
+        Try
+            empresa = gestor.RetrieveAll()(0)
+
+            lblNombreEmpresa.Text = empresa.Nombre
+            lblTelefono.Text = empresa.Telefono
+            lblUbicacion.Text = empresa.Ubicacion
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Information)
+        End Try
+
+    End Sub
+
 End Class

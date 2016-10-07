@@ -8,3 +8,8 @@ C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.Entidades\bi
 C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.csprojResolveAssemblyReference.cache
 C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.dll
 C:\Users\alego\Documents\GitHub\Customer-Recognition-QRCode\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.pdb
+C:\Users\alego\Documents\GitHub\CR-QRCode\CQR\CQR.Entidades\bin\Debug\CQR.Entidades.dll
+C:\Users\alego\Documents\GitHub\CR-QRCode\CQR\CQR.Entidades\bin\Debug\CQR.Entidades.pdb
+C:\Users\alego\Documents\GitHub\CR-QRCode\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.csprojResolveAssemblyReference.cache
+C:\Users\alego\Documents\GitHub\CR-QRCode\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.dll
+C:\Users\alego\Documents\GitHub\CR-QRCode\CQR\CQR.Entidades\obj\Debug\CQR.Entidades.pdb
