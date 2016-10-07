@@ -10,39 +10,40 @@ using System.Threading.Tasks;
 
 namespace CQR.AccesoDatos.CRUD
 {
-    public class ClienteCrudFactory : CrudFactory
+    public class ServicioCrudFactory : CrudFactory
     {
-        private ClienteMapper _mapper;
+        private ServicioMapper _mapper;
 
-        public ClienteCrudFactory()
+        public ServicioCrudFactory()
         {
-            _mapper = new ClienteMapper();
+            _mapper = new ServicioMapper();
         }
+
         public override bool Create(EntidadBase entidad)
         {
             try
             {
-                SqlDao.ExecuteQueryProcedureBoolean(_mapper.GetCreateStatement(entidad));
+                SqlDao.ExecuteProcedure(_mapper.GetCreateStatement(entidad));
+
                 return true;
-            }
-            catch (System.Data.SqlClient.SqlException ex)
-            {
-                AdministrarExcepcion(ex);
-                throw ex;
             }
             catch (Exception ex)
             {
                 AdministrarExcepcion(ex);
                 throw ex;
             }
-           
         }
 
         public override bool Delete(EntidadBase entidad)
         {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteByNombre(EntidadBase entidad)
+        {
             try
             {
-                SqlDao.ExecuteQueryProcedureBoolean(_mapper.GetDeleteStatement(entidad));
+                SqlDao.ExecuteQueryProcedureBoolean(_mapper.GetDeleteByNombreStatement(entidad));
                 return true;
             }
             catch (Exception ex)
@@ -51,7 +52,7 @@ namespace CQR.AccesoDatos.CRUD
                 throw ex;
             }
         }
-        
+
         public override EntidadBase RCreate(EntidadBase entidad)
         {
             throw new NotImplementedException();
@@ -62,25 +63,26 @@ namespace CQR.AccesoDatos.CRUD
             throw new NotImplementedException();
         }
 
-        public override T Retrieve<T>(string cedula)
+        public override T Retrieve<T>(string id)
         {
             try
             {
-                var lstResult = SqlDao.ExecuteQueryProcedure(_mapper.GetRetriveByIdStatement(cedula));
+                var lstResult = SqlDao.ExecuteQueryProcedure(_mapper.GetRetriveByIdStatement(id));
                 var dic = new Dictionary<string, object>();
+
                 if (lstResult.Count > 0)
                 {
                     dic = lstResult[0];
 
-                    return (T)Convert.ChangeType(_mapper.BuildObject(dic), typeof(T));
+                    var objs = _mapper.BuildObject(dic);
+
+                    return (T)Convert.ChangeType(objs, typeof(T));
                 }
 
                 return default(T);
             }
             catch (Exception ex)
             {
-                //Administrar Conexion Data Base
-
                 AdministrarExcepcion(ex);
                 throw ex;
             }
@@ -88,36 +90,31 @@ namespace CQR.AccesoDatos.CRUD
 
         public override List<T> RetrieveAll<T>()
         {
-            var lstResult = SqlDao.ExecuteQueryProcedure(_mapper.GetRetrieveByallStatement());
-            var dic = new List<Dictionary<string, object>>();
-            List<T> list = new List<T>();
-
-            if (lstResult.Count > 0)
-            {
-                for (int i = 0; i < lstResult.Count; i++)
-                {
-                    dic.Add(lstResult[i]);
-                }
-
-                var objs = _mapper.BuildObjects(dic);
-
-                for (int i = 0; i < lstResult.Count; i++)
-                {
-                    list.Add((T)Convert.ChangeType(objs[i], typeof(T)));
-                }
-
-                return list;
-            }
-
-            return default(List<T>);
-        }
-
-        public override bool Update(EntidadBase entidad)
-        {
             try
             {
-                SqlDao.CanExecuteQueryProcedure(_mapper.GetUpdateStatement(entidad));
-                return true;
+                var lstResult = SqlDao.ExecuteQueryProcedure(_mapper.GetRetrieveByallStatement());
+                var dic = new List<Dictionary<string, object>>();
+
+                List<T> list = new List<T>();
+
+                if (lstResult.Count > 0)
+                {
+                    for (int i = 0; i < lstResult.Count; i++)
+                    {
+                        dic.Add(lstResult[i]);
+                    }
+
+                    var objs = _mapper.BuildObjects(dic);
+
+                    for (int i = 0; i < lstResult.Count; i++)
+                    {
+                        list.Add((T)Convert.ChangeType(objs[i], typeof(T)));
+                    }
+
+                    return list;
+                }
+
+                return default(List<T>);
             }
             catch (Exception ex)
             {
@@ -125,6 +122,11 @@ namespace CQR.AccesoDatos.CRUD
                 throw ex;
             }
         }
-        
+
+        public override bool Update(EntidadBase entidad)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

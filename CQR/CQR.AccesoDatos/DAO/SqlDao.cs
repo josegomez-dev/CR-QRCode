@@ -26,9 +26,18 @@ namespace CQR.AccesoDatos.DAO
                 {
                     command.Parameters.Add(param);
                 }
+                try
+                {
 
-                conn.Open();
-                command.ExecuteNonQuery();
+                    conn.Open();
+                    command.ExecuteNonQuery();
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
         }
 
@@ -70,7 +79,6 @@ namespace CQR.AccesoDatos.DAO
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("La base de datos esta desconectada");
                     MessageBox.Show(ex.Message);
                 }
                 
@@ -88,18 +96,27 @@ namespace CQR.AccesoDatos.DAO
             {
                 CommandType = CommandType.StoredProcedure
             })
+            try
             {
-                foreach (var param in sqlOperation.Parameters)
                 {
-                    command.Parameters.Add(param);
-                }
+                    foreach (var param in sqlOperation.Parameters)
+                    {
+                        command.Parameters.Add(param);
+                    }
 
-                conn.Open();
-                var reader = command.ExecuteNonQuery();
-                if (reader > 0)
-                {
-                    itWorked = true;
+
+                    conn.Open();
+                    var reader = command.ExecuteNonQuery();
+                    if (reader > 0)
+                    {
+                        itWorked = true;
+                    }
+
                 }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
             return itWorked;
@@ -115,20 +132,30 @@ namespace CQR.AccesoDatos.DAO
             {
                 CommandType = CommandType.StoredProcedure
             })
+                try
+                {
+
+                    {
+                        // Entra solo si el procedimiento tiene parametros
+                        foreach (var param in sqlOperation.Parameters)
+                        {
+                            command.Parameters.Add(param);
+                        }
+
+
+
+                        conn.Open();
+                        var upt = command.ExecuteNonQuery();
+
+                        if (upt > 0)
+                        {
+                            resul = true;
+                        }
+                    }
+            }
+            catch (SqlException ex)
             {
-                // Entra solo si el procedimiento tiene parametros
-                foreach (var param in sqlOperation.Parameters)
-                {
-                    command.Parameters.Add(param);
-                }
-
-                conn.Open();
-                var upt = command.ExecuteNonQuery();
-
-                if (upt > 0)
-                {
-                    resul = true;
-                }
+                MessageBox.Show(ex.Message);
             }
 
             return resul;

@@ -12,17 +12,17 @@ Public Class frmClientes
         dgClientes.Rows.Clear()
 
         Dim gestor As New GestorCliente(user)
-        Dim lst As List(Of Cliente) = gestor.RetrieveAll()
+        Dim lst As List(Of Cliente)
+
+        lst = gestor.RetrieveAll()
 
         Dim data_table As String() = {"Cedula", "Nombre", "Telefono", "Correo", "Visitas", "Premio"}
         buildTableData(dgClientes, data_table)
 
         If lst IsNot Nothing Then
-
             For Each item In lst
                 dgClientes.Rows.Add(item.Cedula, item.Nombre, item.Telefono, item.Correo, item.Visitas, item.Premio)
             Next
-
         End If
 
         Return 0
@@ -62,11 +62,13 @@ Public Class frmClientes
     End Sub
 
     Private Sub limpiarFormulario()
+
         txtNombre.Clear()
         txtTelefono.Clear()
         txtCorreo.Clear()
         txtVisitas.ResetText()
         txtPremio.ResetText()
+
     End Sub
 
     Private Sub CellValueChanged(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles dgClientes.CellClick
