@@ -4,7 +4,7 @@ Imports CQR.Entidades
 Public Class frmRegistrarCliente
     Dim user As Usuario
     Private Sub txtCedula_TextChanged(sender As Object, e As EventArgs) Handles txtCedula.TextChanged
-        QrCodeImgControl1.Text = txtCedula.Text
+        QrCodeImgControl1.Text = "-" + txtCedula.Text
         Try
             ' Convert the text to a Double and determine if it is a negative number.
             If Double.Parse(txtCedula.Text) < 0 Then
@@ -33,7 +33,6 @@ Public Class frmRegistrarCliente
         cl.Premio = txtPremio.Value
 
         Try
-
             gestor.Create(cl)
             MsgBox("Cliente registrado con exito", MsgBoxStyle.Information)
 
