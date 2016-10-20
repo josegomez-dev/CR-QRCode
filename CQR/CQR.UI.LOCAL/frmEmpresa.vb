@@ -155,8 +155,26 @@ Public Class frmEmpresa
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles btnActualizarTabla.Click
+    Private Sub btnActualizarForm_Click(sender As Object, e As EventArgs) Handles btnActualizarForm.Click
         dgServicios_load()
     End Sub
 
+    Private Sub btnRegistrarServicio_Click(sender As Object, e As EventArgs) Handles btnRegistrarServicio.Click
+
+        Dim gestor As New GestorServicio(user)
+        Dim servicio As New Servicio
+
+        Try
+
+            servicio.Nombre = txtNombreServicio.Text
+            servicio.Descripcion = txtDescripcionServicio.Text
+            servicio.Costo = txtCostoServicio.Text
+
+            gestor.Create(servicio)
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+        End Try
+
+    End Sub
 End Class

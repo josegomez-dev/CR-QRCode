@@ -34,10 +34,11 @@ Partial Class frmEscaner
         '
         'lstboxCodigos
         '
+        Me.lstboxCodigos.BackColor = System.Drawing.Color.WhiteSmoke
         Me.lstboxCodigos.FormattingEnabled = True
-        Me.lstboxCodigos.Location = New System.Drawing.Point(477, 42)
+        Me.lstboxCodigos.Location = New System.Drawing.Point(477, 107)
         Me.lstboxCodigos.Name = "lstboxCodigos"
-        Me.lstboxCodigos.Size = New System.Drawing.Size(120, 329)
+        Me.lstboxCodigos.Size = New System.Drawing.Size(120, 264)
         Me.lstboxCodigos.TabIndex = 3
         '
         'Timer1
@@ -46,7 +47,7 @@ Partial Class frmEscaner
         'vspEscaner
         '
         Me.vspEscaner.BackColor = System.Drawing.SystemColors.ControlText
-        Me.vspEscaner.Location = New System.Drawing.Point(32, 122)
+        Me.vspEscaner.Location = New System.Drawing.Point(32, 73)
         Me.vspEscaner.Name = "vspEscaner"
         Me.vspEscaner.Size = New System.Drawing.Size(430, 249)
         Me.vspEscaner.TabIndex = 4
@@ -55,6 +56,7 @@ Partial Class frmEscaner
         '
         'cmbDispositivos
         '
+        Me.cmbDispositivos.BackColor = System.Drawing.Color.WhiteSmoke
         Me.cmbDispositivos.FormattingEnabled = True
         Me.cmbDispositivos.Location = New System.Drawing.Point(32, 46)
         Me.cmbDispositivos.Name = "cmbDispositivos"
@@ -64,10 +66,10 @@ Partial Class frmEscaner
         'lblEscaner
         '
         Me.lblEscaner.AutoSize = True
-        Me.lblEscaner.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEscaner.Location = New System.Drawing.Point(28, 22)
+        Me.lblEscaner.Font = New System.Drawing.Font("Century Gothic", 10.25!)
+        Me.lblEscaner.Location = New System.Drawing.Point(204, 24)
         Me.lblEscaner.Name = "lblEscaner"
-        Me.lblEscaner.Size = New System.Drawing.Size(310, 21)
+        Me.lblEscaner.Size = New System.Drawing.Size(258, 19)
         Me.lblEscaner.TabIndex = 5
         Me.lblEscaner.Text = "Selecciona un dispositivo de lectura"
         '
@@ -76,8 +78,8 @@ Partial Class frmEscaner
         Me.btnIniciar.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIniciar.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIniciar.ForeColor = System.Drawing.Color.White
-        Me.btnIniciar.Location = New System.Drawing.Point(83, 73)
+        Me.btnIniciar.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.btnIniciar.Location = New System.Drawing.Point(65, 328)
         Me.btnIniciar.Name = "btnIniciar"
         Me.btnIniciar.Size = New System.Drawing.Size(181, 36)
         Me.btnIniciar.TabIndex = 18
@@ -89,8 +91,8 @@ Partial Class frmEscaner
         Me.btnDetener.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnDetener.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDetener.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDetener.ForeColor = System.Drawing.Color.White
-        Me.btnDetener.Location = New System.Drawing.Point(270, 73)
+        Me.btnDetener.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.btnDetener.Location = New System.Drawing.Point(252, 328)
         Me.btnDetener.Name = "btnDetener"
         Me.btnDetener.Size = New System.Drawing.Size(181, 36)
         Me.btnDetener.TabIndex = 19
@@ -101,7 +103,7 @@ Partial Class frmEscaner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(623, 383)
         Me.Controls.Add(Me.btnDetener)
         Me.Controls.Add(Me.btnIniciar)

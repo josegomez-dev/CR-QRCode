@@ -14,12 +14,10 @@ Public Class frmMenuPrincipal
 
     Function showScreen(ByVal Xform As Form)
         Me.SplitContainer1.Panel2.Controls.Clear()
-
         Dim formClientes = Xform
         formClientes.MdiParent = Me
         Me.SplitContainer1.Panel2.Controls.Add(formClientes)
         formClientes.Show()
-
         Return 0
     End Function
 
@@ -41,9 +39,6 @@ Public Class frmMenuPrincipal
         Try
             empresa = gestor.RetrieveAll()(0)
 
-            lblNombreEmpresa.Text = empresa.Nombre
-            lblTelefono.Text = empresa.Telefono
-            lblUbicacion.Text = empresa.Ubicacion
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information)
@@ -51,4 +46,22 @@ Public Class frmMenuPrincipal
 
     End Sub
 
+    Private Sub btnEscaner_Click(sender As Object, e As EventArgs)
+        Dim form As New frmEscaner()
+        form.Show()
+    End Sub
+
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        Dim form As New frmRegistrarCliente()
+        form.Show()
+    End Sub
+
+    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+        Dim form As New frmEscaner()
+        form.Show()
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
+        Me.Close()
+    End Sub
 End Class
