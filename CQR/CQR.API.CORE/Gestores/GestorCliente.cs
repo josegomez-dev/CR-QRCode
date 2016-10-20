@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//gestorApi
 namespace CQR.API.CORE.Gestores
 {
     public class GestorCliente : GestorAPI

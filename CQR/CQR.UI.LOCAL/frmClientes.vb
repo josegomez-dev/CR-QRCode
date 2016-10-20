@@ -39,7 +39,7 @@ Public Class frmClientes
         Return 0
     End Function
 
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs)
 
         Dim gestor As New GestorCliente(user)
 
@@ -83,10 +83,6 @@ Public Class frmClientes
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        cargar_tablaClientes()
-    End Sub
-
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
 
         Dim gestor As New GestorCliente(user)
@@ -117,5 +113,9 @@ Public Class frmClientes
 
         cargar_tablaClientes()
 
+    End Sub
+
+    Private Sub btnActualizarForm_Click(sender As Object, e As EventArgs) Handles btnActualizarForm.Click
+        cargar_tablaClientes()
     End Sub
 End Class

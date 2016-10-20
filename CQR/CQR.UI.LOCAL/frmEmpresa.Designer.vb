@@ -22,8 +22,8 @@ Partial Class frmEmpresa
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnRegistrarServicio = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnNuevoServicio = New System.Windows.Forms.Button()
@@ -34,10 +34,8 @@ Partial Class frmEmpresa
         Me.txtNombreServicio = New System.Windows.Forms.TextBox()
         Me.txtDescripcionServicio = New System.Windows.Forms.TextBox()
         Me.txtCostoServicio = New System.Windows.Forms.TextBox()
-        Me.btnActualizarTabla = New AForge.Controls.PictureBox()
         Me.btnEliminar = New AForge.Controls.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.dgServicios = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnNuevoEmpresa = New System.Windows.Forms.Button()
         Me.btnRegistrarEmpresa = New System.Windows.Forms.Button()
@@ -51,53 +49,25 @@ Partial Class frmEmpresa
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtCedulaJuridica = New System.Windows.Forms.TextBox()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
+        Me.dgServicios = New System.Windows.Forms.DataGridView()
+        Me.btnActualizarForm = New AForge.Controls.PictureBox()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.btnActualizarTabla, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.dgServicios, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnActualizarForm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(-1, 2)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(814, 445)
-        Me.TabControl1.TabIndex = 0
-        '
-        'TabPage1
-        '
-        Me.TabPage1.Controls.Add(Me.btnRegistrarServicio)
-        Me.TabPage1.Controls.Add(Me.GroupBox2)
-        Me.TabPage1.Controls.Add(Me.btnActualizarTabla)
-        Me.TabPage1.Controls.Add(Me.btnEliminar)
-        Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.dgServicios)
-        Me.TabPage1.Controls.Add(Me.GroupBox1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(806, 419)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "MI EMPRESA"
-        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'btnRegistrarServicio
         '
         Me.btnRegistrarServicio.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnRegistrarServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRegistrarServicio.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrarServicio.ForeColor = System.Drawing.Color.White
-        Me.btnRegistrarServicio.Location = New System.Drawing.Point(410, 138)
+        Me.btnRegistrarServicio.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.btnRegistrarServicio.Location = New System.Drawing.Point(413, 146)
         Me.btnRegistrarServicio.Name = "btnRegistrarServicio"
         Me.btnRegistrarServicio.Size = New System.Drawing.Size(375, 36)
-        Me.btnRegistrarServicio.TabIndex = 47
+        Me.btnRegistrarServicio.TabIndex = 53
         Me.btnRegistrarServicio.Text = "Registrar Servicio"
         Me.btnRegistrarServicio.UseVisualStyleBackColor = False
         '
@@ -112,10 +82,10 @@ Partial Class frmEmpresa
         Me.GroupBox2.Controls.Add(Me.txtDescripcionServicio)
         Me.GroupBox2.Controls.Add(Me.txtCostoServicio)
         Me.GroupBox2.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.GroupBox2.Location = New System.Drawing.Point(410, 17)
+        Me.GroupBox2.Location = New System.Drawing.Point(413, 25)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(375, 157)
-        Me.GroupBox2.TabIndex = 50
+        Me.GroupBox2.TabIndex = 57
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Informacion del servicio"
         '
@@ -197,22 +167,13 @@ Partial Class frmEmpresa
         Me.txtCostoServicio.Size = New System.Drawing.Size(154, 20)
         Me.txtCostoServicio.TabIndex = 32
         '
-        'btnActualizarTabla
-        '
-        Me.btnActualizarTabla.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473957601_InterfaceExpendet_01
-        Me.btnActualizarTabla.Location = New System.Drawing.Point(713, 380)
-        Me.btnActualizarTabla.Name = "btnActualizarTabla"
-        Me.btnActualizarTabla.Size = New System.Drawing.Size(33, 32)
-        Me.btnActualizarTabla.TabIndex = 49
-        Me.btnActualizarTabla.TabStop = False
-        '
         'btnEliminar
         '
         Me.btnEliminar.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473950306_edit_delete
-        Me.btnEliminar.Location = New System.Drawing.Point(752, 380)
+        Me.btnEliminar.Location = New System.Drawing.Point(740, 388)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(33, 36)
-        Me.btnEliminar.TabIndex = 48
+        Me.btnEliminar.TabIndex = 55
         Me.btnEliminar.TabStop = False
         '
         'Label5
@@ -220,21 +181,11 @@ Partial Class frmEmpresa
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label5.Location = New System.Drawing.Point(406, 189)
+        Me.Label5.Location = New System.Drawing.Point(409, 197)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(150, 21)
-        Me.Label5.TabIndex = 47
+        Me.Label5.TabIndex = 54
         Me.Label5.Text = "Lista de Servicios"
-        '
-        'dgServicios
-        '
-        Me.dgServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgServicios.BackgroundColor = System.Drawing.Color.CornflowerBlue
-        Me.dgServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgServicios.Location = New System.Drawing.Point(410, 212)
-        Me.dgServicios.Name = "dgServicios"
-        Me.dgServicios.Size = New System.Drawing.Size(375, 165)
-        Me.dgServicios.TabIndex = 1
         '
         'GroupBox1
         '
@@ -251,10 +202,10 @@ Partial Class frmEmpresa
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.txtCedulaJuridica)
         Me.GroupBox1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.GroupBox1.Location = New System.Drawing.Point(24, 17)
+        Me.GroupBox1.Location = New System.Drawing.Point(27, 25)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(361, 385)
-        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabIndex = 51
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informacion de la Empresa"
         '
@@ -276,7 +227,7 @@ Partial Class frmEmpresa
         Me.btnRegistrarEmpresa.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnRegistrarEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRegistrarEmpresa.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrarEmpresa.ForeColor = System.Drawing.Color.White
+        Me.btnRegistrarEmpresa.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.btnRegistrarEmpresa.Location = New System.Drawing.Point(0, 349)
         Me.btnRegistrarEmpresa.Name = "btnRegistrarEmpresa"
         Me.btnRegistrarEmpresa.Size = New System.Drawing.Size(361, 36)
@@ -374,45 +325,88 @@ Partial Class frmEmpresa
         Me.txtCedulaJuridica.Size = New System.Drawing.Size(154, 20)
         Me.txtCedulaJuridica.TabIndex = 36
         '
-        'TabPage2
+        'dgServicios
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(806, 419)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "SERVICIOS"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.dgServicios.AllowUserToOrderColumns = True
+        Me.dgServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgServicios.BackgroundColor = System.Drawing.Color.CornflowerBlue
+        Me.dgServicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken
+        Me.dgServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkRed
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgServicios.DefaultCellStyle = DataGridViewCellStyle5
+        Me.dgServicios.GridColor = System.Drawing.Color.DarkBlue
+        Me.dgServicios.Location = New System.Drawing.Point(413, 218)
+        Me.dgServicios.MultiSelect = False
+        Me.dgServicios.Name = "dgServicios"
+        Me.dgServicios.ReadOnly = True
+        Me.dgServicios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        Me.dgServicios.RowsDefaultCellStyle = DataGridViewCellStyle6
+        Me.dgServicios.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.dgServicios.Size = New System.Drawing.Size(375, 164)
+        Me.dgServicios.TabIndex = 58
+        '
+        'btnActualizarForm
+        '
+        Me.btnActualizarForm.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473957601_InterfaceExpendet_01
+        Me.btnActualizarForm.Location = New System.Drawing.Point(703, 388)
+        Me.btnActualizarForm.Name = "btnActualizarForm"
+        Me.btnActualizarForm.Size = New System.Drawing.Size(31, 36)
+        Me.btnActualizarForm.TabIndex = 59
+        Me.btnActualizarForm.TabStop = False
         '
         'frmEmpresa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(814, 448)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.btnActualizarForm)
+        Me.Controls.Add(Me.dgServicios)
+        Me.Controls.Add(Me.btnRegistrarServicio)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmEmpresa"
         Me.Text = "frmEmpresa"
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.btnActualizarTabla, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgServicios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.dgServicios, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnActualizarForm, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents btnRegistrarServicio As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents btnNuevoServicio As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtNombreServicio As TextBox
+    Friend WithEvents txtDescripcionServicio As TextBox
+    Friend WithEvents txtCostoServicio As TextBox
+    Friend WithEvents btnEliminar As AForge.Controls.PictureBox
+    Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents btnNuevoEmpresa As Button
+    Friend WithEvents btnRegistrarEmpresa As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents txtSitio As TextBox
     Friend WithEvents Label3 As Label
@@ -423,20 +417,6 @@ Partial Class frmEmpresa
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtCedulaJuridica As TextBox
-    Friend WithEvents btnRegistrarEmpresa As Button
-    Friend WithEvents btnNuevoEmpresa As Button
-    Friend WithEvents Label5 As Label
     Friend WithEvents dgServicios As DataGridView
-    Friend WithEvents btnActualizarTabla As AForge.Controls.PictureBox
-    Friend WithEvents btnEliminar As AForge.Controls.PictureBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents txtNombreServicio As TextBox
-    Friend WithEvents txtDescripcionServicio As TextBox
-    Friend WithEvents txtCostoServicio As TextBox
-    Friend WithEvents btnRegistrarServicio As Button
-    Friend WithEvents Label8 As Label
-    Friend WithEvents btnNuevoServicio As Button
+    Friend WithEvents btnActualizarForm As AForge.Controls.PictureBox
 End Class
