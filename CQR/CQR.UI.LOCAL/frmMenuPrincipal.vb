@@ -61,7 +61,13 @@ Public Class frmMenuPrincipal
         form.Show()
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-        Me.Close()
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        Select Case MsgBox("Desea cerrar la aplicacion?", MsgBoxStyle.YesNoCancel, "Confirmar accion")
+            Case MsgBoxResult.Yes
+                Me.Close()
+            Case MsgBoxResult.Cancel
+                MessageBox.Show("Cancel action")
+            Case MsgBoxResult.No
+        End Select
     End Sub
 End Class

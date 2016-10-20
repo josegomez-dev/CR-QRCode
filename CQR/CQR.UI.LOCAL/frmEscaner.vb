@@ -31,22 +31,21 @@ Public Class frmEscaner
                 Me.Close()
 
                 Try
-
+                    Dim visitasAct = cliente.Visitas
                     'lstboxCodigos.Items.Add(clienteidx)
                     clienteidx = resultados(0).Remove(0, 1)
                     cliente = gestor.RetrievePorId(clienteidx)
                     cliente.Visitas = cliente.Visitas + 1
 
-                    MsgBox(cliente.Nombre & " ha visitado una vez mas tu negocio! : " & cliente.Visitas, MsgBoxStyle.Information)
-
-                    Dim resul = InputBox("La informacion anterior es correcta?", "Confirmacion de Visita", "Ingrese un comentario (Opcional)")
-
-                    If resul <> "" Then
-                        gestor.Update(cliente)
-                        MsgBox(cliente.Nombre & " tiene " & cliente.Visitas & "visitas", MsgBoxStyle.Information)
-                    Else
-                        MsgBox("ERROR!, La informacion es incorrecta", MsgBoxStyle.Exclamation)
-                    End If
+                    Select Case MsgBox(cliente.Nombre & " ha visitado una vez mas tu negocio!" & Chr(13) & "Visitas actuales: " & visitasAct, MsgBoxStyle.YesNoCancel, "Confirmar accion")
+                        Case MsgBoxResult.Yes
+                            gestor.Update(cliente)
+                            MessageBox.Show("Informacion actualizada exitosamente!" & Chr(13) & "El cliente ahora tiene " & cliente.Visitas & " visitas")
+                        Case MsgBoxResult.Cancel
+                            MessageBox.Show("Cancel action")
+                        Case MsgBoxResult.No
+                            MessageBox.Show("Identificacion Falsa, alerta!")
+                    End Select
 
                 Catch ex As Exception
                     MsgBox(ex.Message, MsgBoxStyle.Exclamation)
