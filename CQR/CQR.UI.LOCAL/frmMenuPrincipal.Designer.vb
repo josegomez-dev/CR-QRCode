@@ -24,21 +24,21 @@ Partial Class frmMenuPrincipal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMenuPrincipal))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.lblNombreEmpresa = New System.Windows.Forms.Label()
-        Me.btnEmpresa = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.PictureBox1 = New AForge.Controls.PictureBox()
         Me.btnSeguridad = New System.Windows.Forms.Button()
-        Me.btnReportes = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnEscanerCodigo = New System.Windows.Forms.ToolStripButton()
-        Me.btnRegistrarCliente = New System.Windows.Forms.ToolStripButton()
+        Me.lblNombreEmpresa = New System.Windows.Forms.Label()
+        Me.btnEmpresa = New System.Windows.Forms.Button()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnRegistrarCliente = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnEscanerCodigo = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.btnReportes = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -79,31 +79,29 @@ Partial Class frmMenuPrincipal
         Me.SplitContainer1.SplitterDistance = 225
         Me.SplitContainer1.TabIndex = 3
         '
-        'lblNombreEmpresa
+        'Label2
         '
-        Me.lblNombreEmpresa.AutoSize = True
-        Me.lblNombreEmpresa.BackColor = System.Drawing.Color.Transparent
-        Me.lblNombreEmpresa.Font = New System.Drawing.Font("Century Schoolbook", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombreEmpresa.ForeColor = System.Drawing.Color.Maroon
-        Me.lblNombreEmpresa.Location = New System.Drawing.Point(54, 217)
-        Me.lblNombreEmpresa.Name = "lblNombreEmpresa"
-        Me.lblNombreEmpresa.Size = New System.Drawing.Size(118, 25)
-        Me.lblNombreEmpresa.TabIndex = 7
-        Me.lblNombreEmpresa.Text = "LAVACAR"
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.Firebrick
+        Me.Label2.Location = New System.Drawing.Point(74, 415)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(80, 23)
+        Me.Label2.TabIndex = 14
+        Me.Label2.Text = "< SALIR"
         '
-        'btnEmpresa
+        'Label1
         '
-        Me.btnEmpresa.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.btnEmpresa.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEmpresa.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEmpresa.ForeColor = System.Drawing.Color.SteelBlue
-        Me.btnEmpresa.Location = New System.Drawing.Point(0, 306)
-        Me.btnEmpresa.Name = "btnEmpresa"
-        Me.btnEmpresa.Size = New System.Drawing.Size(225, 35)
-        Me.btnEmpresa.TabIndex = 5
-        Me.btnEmpresa.Text = "Empresa"
-        Me.btnEmpresa.UseVisualStyleBackColor = False
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.Firebrick
+        Me.Label1.Location = New System.Drawing.Point(67, 194)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(87, 23)
+        Me.Label1.TabIndex = 13
+        Me.Label1.Text = "Century"
         '
         'btnClientes
         '
@@ -142,6 +140,82 @@ Partial Class frmMenuPrincipal
         Me.btnSeguridad.Text = "Seguridad"
         Me.btnSeguridad.UseVisualStyleBackColor = False
         '
+        'lblNombreEmpresa
+        '
+        Me.lblNombreEmpresa.AutoSize = True
+        Me.lblNombreEmpresa.BackColor = System.Drawing.Color.Transparent
+        Me.lblNombreEmpresa.Font = New System.Drawing.Font("Century Schoolbook", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombreEmpresa.ForeColor = System.Drawing.Color.Maroon
+        Me.lblNombreEmpresa.Location = New System.Drawing.Point(54, 217)
+        Me.lblNombreEmpresa.Name = "lblNombreEmpresa"
+        Me.lblNombreEmpresa.Size = New System.Drawing.Size(118, 25)
+        Me.lblNombreEmpresa.TabIndex = 7
+        Me.lblNombreEmpresa.Text = "LAVACAR"
+        '
+        'btnEmpresa
+        '
+        Me.btnEmpresa.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnEmpresa.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEmpresa.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEmpresa.ForeColor = System.Drawing.Color.SteelBlue
+        Me.btnEmpresa.Location = New System.Drawing.Point(0, 306)
+        Me.btnEmpresa.Name = "btnEmpresa"
+        Me.btnEmpresa.Size = New System.Drawing.Size(225, 35)
+        Me.btnEmpresa.TabIndex = 5
+        Me.btnEmpresa.Text = "Empresa"
+        Me.btnEmpresa.UseVisualStyleBackColor = False
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.BackColor = System.Drawing.Color.Firebrick
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator3, Me.btnRegistrarCliente, Me.ToolStripLabel1, Me.ToolStripSeparator1, Me.btnEscanerCodigo, Me.ToolStripLabel2})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.ToolStrip1.Size = New System.Drawing.Size(225, 25)
+        Me.ToolStrip1.TabIndex = 0
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        '
+        'btnRegistrarCliente
+        '
+        Me.btnRegistrarCliente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnRegistrarCliente.Image = CType(resources.GetObject("btnRegistrarCliente.Image"), System.Drawing.Image)
+        Me.btnRegistrarCliente.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnRegistrarCliente.Name = "btnRegistrarCliente"
+        Me.btnRegistrarCliente.Size = New System.Drawing.Size(23, 22)
+        Me.btnRegistrarCliente.Text = "Registrar nuevo Cliente"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(50, 22)
+        Me.ToolStripLabel1.Text = "Registro"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'btnEscanerCodigo
+        '
+        Me.btnEscanerCodigo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnEscanerCodigo.Image = CType(resources.GetObject("btnEscanerCodigo.Image"), System.Drawing.Image)
+        Me.btnEscanerCodigo.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnEscanerCodigo.Name = "btnEscanerCodigo"
+        Me.btnEscanerCodigo.Size = New System.Drawing.Size(23, 22)
+        Me.btnEscanerCodigo.Text = "Escanear codigo QR"
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(47, 22)
+        Me.ToolStripLabel2.Text = "Escaner"
+        '
         'btnReportes
         '
         Me.btnReportes.BackColor = System.Drawing.Color.CornflowerBlue
@@ -155,80 +229,6 @@ Partial Class frmMenuPrincipal
         Me.btnReportes.TabIndex = 6
         Me.btnReportes.Text = "Reportes"
         Me.btnReportes.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.Firebrick
-        Me.Label1.Location = New System.Drawing.Point(67, 194)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 23)
-        Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Century"
-        '
-        'btnEscanerCodigo
-        '
-        Me.btnEscanerCodigo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnEscanerCodigo.Image = CType(resources.GetObject("btnEscanerCodigo.Image"), System.Drawing.Image)
-        Me.btnEscanerCodigo.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnEscanerCodigo.Name = "btnEscanerCodigo"
-        Me.btnEscanerCodigo.Size = New System.Drawing.Size(23, 22)
-        Me.btnEscanerCodigo.Text = "Escanear codigo QR"
-        '
-        'btnRegistrarCliente
-        '
-        Me.btnRegistrarCliente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnRegistrarCliente.Image = CType(resources.GetObject("btnRegistrarCliente.Image"), System.Drawing.Image)
-        Me.btnRegistrarCliente.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnRegistrarCliente.Name = "btnRegistrarCliente"
-        Me.btnRegistrarCliente.Size = New System.Drawing.Size(23, 22)
-        Me.btnRegistrarCliente.Text = "Registrar nuevo Cliente"
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.Firebrick
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator3, Me.btnRegistrarCliente, Me.ToolStripLabel1, Me.ToolStripSeparator1, Me.btnEscanerCodigo, Me.ToolStripLabel2})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.ToolStrip1.Size = New System.Drawing.Size(225, 25)
-        Me.ToolStrip1.TabIndex = 0
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(50, 22)
-        Me.ToolStripLabel1.Text = "Registro"
-        '
-        'ToolStripLabel2
-        '
-        Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(47, 22)
-        Me.ToolStripLabel2.Text = "Escaner"
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.Color.Firebrick
-        Me.Label2.Location = New System.Drawing.Point(74, 415)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 23)
-        Me.Label2.TabIndex = 14
-        Me.Label2.Text = "< SALIR"
         '
         'frmMenuPrincipal
         '
