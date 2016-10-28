@@ -23,7 +23,6 @@ Partial Class frmEscaner
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.lstboxCodigos = New System.Windows.Forms.ListBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.vspEscaner = New AForge.Controls.VideoSourcePlayer()
         Me.cmbDispositivos = New System.Windows.Forms.ComboBox()
@@ -32,21 +31,13 @@ Partial Class frmEscaner
         Me.btnDetener = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'lstboxCodigos
-        '
-        Me.lstboxCodigos.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.lstboxCodigos.FormattingEnabled = True
-        Me.lstboxCodigos.Location = New System.Drawing.Point(477, 107)
-        Me.lstboxCodigos.Name = "lstboxCodigos"
-        Me.lstboxCodigos.Size = New System.Drawing.Size(120, 264)
-        Me.lstboxCodigos.TabIndex = 3
-        '
         'Timer1
         '
         '
         'vspEscaner
         '
         Me.vspEscaner.BackColor = System.Drawing.SystemColors.ControlText
+        Me.vspEscaner.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.vspEscaner.Location = New System.Drawing.Point(32, 73)
         Me.vspEscaner.Name = "vspEscaner"
         Me.vspEscaner.Size = New System.Drawing.Size(430, 249)
@@ -104,13 +95,12 @@ Partial Class frmEscaner
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(623, 383)
+        Me.ClientSize = New System.Drawing.Size(495, 383)
         Me.Controls.Add(Me.btnDetener)
         Me.Controls.Add(Me.btnIniciar)
         Me.Controls.Add(Me.cmbDispositivos)
         Me.Controls.Add(Me.lblEscaner)
         Me.Controls.Add(Me.vspEscaner)
-        Me.Controls.Add(Me.lstboxCodigos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmEscaner"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -119,7 +109,6 @@ Partial Class frmEscaner
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lstboxCodigos As ListBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents vspEscaner As AForge.Controls.VideoSourcePlayer
     Friend WithEvents cmbDispositivos As ComboBox

@@ -22,8 +22,8 @@ Partial Class frmEmpresa
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnRegistrarServicio = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnNuevoServicio = New System.Windows.Forms.Button()
@@ -34,8 +34,6 @@ Partial Class frmEmpresa
         Me.txtNombreServicio = New System.Windows.Forms.TextBox()
         Me.txtDescripcionServicio = New System.Windows.Forms.TextBox()
         Me.txtCostoServicio = New System.Windows.Forms.TextBox()
-        Me.btnEliminar = New AForge.Controls.PictureBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnNuevoEmpresa = New System.Windows.Forms.Button()
         Me.btnRegistrarEmpresa = New System.Windows.Forms.Button()
@@ -49,32 +47,39 @@ Partial Class frmEmpresa
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtCedulaJuridica = New System.Windows.Forms.TextBox()
-        Me.dgServicios = New System.Windows.Forms.DataGridView()
         Me.btnActualizarForm = New AForge.Controls.PictureBox()
+        Me.btnEliminar = New AForge.Controls.PictureBox()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New AForge.Controls.PictureBox()
+        Me.dgServicios = New System.Windows.Forms.DataGridView()
+        Me.Servicios = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.dgServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnActualizarForm, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnRegistrarServicio
         '
         Me.btnRegistrarServicio.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnRegistrarServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegistrarServicio.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrarServicio.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.btnRegistrarServicio.Location = New System.Drawing.Point(413, 146)
+        Me.btnRegistrarServicio.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrarServicio.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btnRegistrarServicio.Location = New System.Drawing.Point(0, 135)
         Me.btnRegistrarServicio.Name = "btnRegistrarServicio"
-        Me.btnRegistrarServicio.Size = New System.Drawing.Size(375, 36)
+        Me.btnRegistrarServicio.Size = New System.Drawing.Size(391, 36)
         Me.btnRegistrarServicio.TabIndex = 53
         Me.btnRegistrarServicio.Text = "Registrar Servicio"
         Me.btnRegistrarServicio.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.GroupBox2.Controls.Add(Me.btnNuevoServicio)
         Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.btnRegistrarServicio)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label11)
@@ -82,9 +87,9 @@ Partial Class frmEmpresa
         Me.GroupBox2.Controls.Add(Me.txtDescripcionServicio)
         Me.GroupBox2.Controls.Add(Me.txtCostoServicio)
         Me.GroupBox2.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.GroupBox2.Location = New System.Drawing.Point(413, 25)
+        Me.GroupBox2.Location = New System.Drawing.Point(397, 25)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(375, 157)
+        Me.GroupBox2.Size = New System.Drawing.Size(391, 171)
         Me.GroupBox2.TabIndex = 57
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Informacion del servicio"
@@ -95,7 +100,7 @@ Partial Class frmEmpresa
         Me.btnNuevoServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNuevoServicio.Font = New System.Drawing.Font("Arial Black", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevoServicio.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btnNuevoServicio.Location = New System.Drawing.Point(322, 17)
+        Me.btnNuevoServicio.Location = New System.Drawing.Point(347, 12)
         Me.btnNuevoServicio.Name = "btnNuevoServicio"
         Me.btnNuevoServicio.Size = New System.Drawing.Size(38, 36)
         Me.btnNuevoServicio.TabIndex = 47
@@ -107,7 +112,7 @@ Partial Class frmEmpresa
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label8.Location = New System.Drawing.Point(294, 92)
+        Me.Label8.Location = New System.Drawing.Point(320, 94)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(19, 21)
         Me.Label8.TabIndex = 33
@@ -116,79 +121,63 @@ Partial Class frmEmpresa
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label6.Location = New System.Drawing.Point(46, 32)
+        Me.Label6.Location = New System.Drawing.Point(90, 33)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(77, 21)
+        Me.Label6.Size = New System.Drawing.Size(64, 19)
         Me.Label6.TabIndex = 27
         Me.Label6.Text = "Nombre"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label9.Location = New System.Drawing.Point(16, 62)
+        Me.Label9.Location = New System.Drawing.Point(65, 63)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(107, 21)
+        Me.Label9.Size = New System.Drawing.Size(89, 19)
         Me.Label9.TabIndex = 28
         Me.Label9.Text = "Descripcion"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label11.Location = New System.Drawing.Point(63, 92)
+        Me.Label11.Location = New System.Drawing.Point(106, 93)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(60, 21)
+        Me.Label11.Size = New System.Drawing.Size(48, 19)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Costo"
         '
         'txtNombreServicio
         '
-        Me.txtNombreServicio.Location = New System.Drawing.Point(138, 35)
+        Me.txtNombreServicio.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNombreServicio.Location = New System.Drawing.Point(164, 37)
         Me.txtNombreServicio.Name = "txtNombreServicio"
-        Me.txtNombreServicio.Size = New System.Drawing.Size(154, 20)
+        Me.txtNombreServicio.Size = New System.Drawing.Size(154, 13)
         Me.txtNombreServicio.TabIndex = 30
         '
         'txtDescripcionServicio
         '
-        Me.txtDescripcionServicio.Location = New System.Drawing.Point(138, 65)
+        Me.txtDescripcionServicio.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtDescripcionServicio.Location = New System.Drawing.Point(164, 67)
         Me.txtDescripcionServicio.Name = "txtDescripcionServicio"
-        Me.txtDescripcionServicio.Size = New System.Drawing.Size(154, 20)
+        Me.txtDescripcionServicio.Size = New System.Drawing.Size(154, 13)
         Me.txtDescripcionServicio.TabIndex = 31
         '
         'txtCostoServicio
         '
-        Me.txtCostoServicio.Location = New System.Drawing.Point(138, 95)
+        Me.txtCostoServicio.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCostoServicio.Location = New System.Drawing.Point(164, 97)
         Me.txtCostoServicio.Name = "txtCostoServicio"
-        Me.txtCostoServicio.Size = New System.Drawing.Size(154, 20)
+        Me.txtCostoServicio.Size = New System.Drawing.Size(154, 13)
         Me.txtCostoServicio.TabIndex = 32
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473950306_edit_delete
-        Me.btnEliminar.Location = New System.Drawing.Point(740, 388)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(33, 36)
-        Me.btnEliminar.TabIndex = 55
-        Me.btnEliminar.TabStop = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label5.Location = New System.Drawing.Point(409, 197)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(150, 21)
-        Me.Label5.TabIndex = 54
-        Me.Label5.Text = "Lista de Servicios"
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.GroupBox1.Controls.Add(Me.btnNuevoEmpresa)
         Me.GroupBox1.Controls.Add(Me.btnRegistrarEmpresa)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -204,7 +193,7 @@ Partial Class frmEmpresa
         Me.GroupBox1.ForeColor = System.Drawing.Color.CornflowerBlue
         Me.GroupBox1.Location = New System.Drawing.Point(27, 25)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(361, 385)
+        Me.GroupBox1.Size = New System.Drawing.Size(349, 389)
         Me.GroupBox1.TabIndex = 51
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informacion de la Empresa"
@@ -215,7 +204,7 @@ Partial Class frmEmpresa
         Me.btnNuevoEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNuevoEmpresa.Font = New System.Drawing.Font("Arial Black", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevoEmpresa.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.btnNuevoEmpresa.Location = New System.Drawing.Point(307, 19)
+        Me.btnNuevoEmpresa.Location = New System.Drawing.Point(297, 19)
         Me.btnNuevoEmpresa.Name = "btnNuevoEmpresa"
         Me.btnNuevoEmpresa.Size = New System.Drawing.Size(38, 36)
         Me.btnNuevoEmpresa.TabIndex = 46
@@ -226,11 +215,11 @@ Partial Class frmEmpresa
         '
         Me.btnRegistrarEmpresa.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnRegistrarEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnRegistrarEmpresa.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrarEmpresa.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.btnRegistrarEmpresa.Location = New System.Drawing.Point(0, 349)
+        Me.btnRegistrarEmpresa.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrarEmpresa.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btnRegistrarEmpresa.Location = New System.Drawing.Point(0, 353)
         Me.btnRegistrarEmpresa.Name = "btnRegistrarEmpresa"
-        Me.btnRegistrarEmpresa.Size = New System.Drawing.Size(361, 36)
+        Me.btnRegistrarEmpresa.Size = New System.Drawing.Size(349, 36)
         Me.btnRegistrarEmpresa.TabIndex = 45
         Me.btnRegistrarEmpresa.Text = "Actualizar informacion"
         Me.btnRegistrarEmpresa.UseVisualStyleBackColor = False
@@ -238,130 +227,172 @@ Partial Class frmEmpresa
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label4.Location = New System.Drawing.Point(118, 232)
+        Me.Label4.Location = New System.Drawing.Point(103, 209)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(42, 21)
+        Me.Label4.Size = New System.Drawing.Size(36, 19)
         Me.Label4.TabIndex = 43
         Me.Label4.Text = "Sitio"
         '
         'txtSitio
         '
-        Me.txtSitio.Location = New System.Drawing.Point(166, 235)
+        Me.txtSitio.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtSitio.Location = New System.Drawing.Point(145, 212)
         Me.txtSitio.Name = "txtSitio"
-        Me.txtSitio.Size = New System.Drawing.Size(154, 20)
+        Me.txtSitio.Size = New System.Drawing.Size(154, 13)
         Me.txtSitio.TabIndex = 44
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label3.Location = New System.Drawing.Point(65, 195)
+        Me.Label3.Location = New System.Drawing.Point(59, 171)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 21)
+        Me.Label3.Size = New System.Drawing.Size(80, 19)
         Me.Label3.TabIndex = 41
         Me.Label3.Text = "Ubicacion"
         '
         'txtUbicacion
         '
-        Me.txtUbicacion.Location = New System.Drawing.Point(166, 198)
+        Me.txtUbicacion.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtUbicacion.Location = New System.Drawing.Point(145, 175)
         Me.txtUbicacion.Name = "txtUbicacion"
-        Me.txtUbicacion.Size = New System.Drawing.Size(154, 20)
+        Me.txtUbicacion.Size = New System.Drawing.Size(154, 13)
         Me.txtUbicacion.TabIndex = 42
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label2.Location = New System.Drawing.Point(80, 159)
+        Me.Label2.Location = New System.Drawing.Point(73, 135)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 21)
+        Me.Label2.Size = New System.Drawing.Size(66, 19)
         Me.Label2.TabIndex = 39
         Me.Label2.Text = "Telefono"
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(166, 162)
+        Me.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtTelefono.Location = New System.Drawing.Point(145, 139)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(154, 20)
+        Me.txtTelefono.Size = New System.Drawing.Size(154, 13)
         Me.txtTelefono.TabIndex = 40
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label1.Location = New System.Drawing.Point(83, 124)
+        Me.Label1.Location = New System.Drawing.Point(75, 100)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 21)
+        Me.Label1.Size = New System.Drawing.Size(64, 19)
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "Nombre"
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(166, 127)
+        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtNombre.Location = New System.Drawing.Point(145, 104)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(154, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(154, 13)
         Me.txtNombre.TabIndex = 38
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label7.Location = New System.Drawing.Point(21, 89)
+        Me.Label7.Location = New System.Drawing.Point(19, 65)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(141, 21)
+        Me.Label7.Size = New System.Drawing.Size(120, 19)
         Me.Label7.TabIndex = 33
         Me.Label7.Text = "Cedula Juridica"
         '
         'txtCedulaJuridica
         '
-        Me.txtCedulaJuridica.Location = New System.Drawing.Point(166, 92)
+        Me.txtCedulaJuridica.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCedulaJuridica.Location = New System.Drawing.Point(145, 69)
         Me.txtCedulaJuridica.Name = "txtCedulaJuridica"
-        Me.txtCedulaJuridica.Size = New System.Drawing.Size(154, 20)
+        Me.txtCedulaJuridica.Size = New System.Drawing.Size(154, 13)
         Me.txtCedulaJuridica.TabIndex = 36
+        '
+        'btnActualizarForm
+        '
+        Me.btnActualizarForm.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473957601_InterfaceExpendet_01
+        Me.btnActualizarForm.Location = New System.Drawing.Point(527, 215)
+        Me.btnActualizarForm.Name = "btnActualizarForm"
+        Me.btnActualizarForm.Size = New System.Drawing.Size(31, 36)
+        Me.btnActualizarForm.TabIndex = 59
+        Me.btnActualizarForm.TabStop = False
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473950306_edit_delete
+        Me.btnEliminar.Location = New System.Drawing.Point(564, 215)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(33, 36)
+        Me.btnEliminar.TabIndex = 55
+        Me.btnEliminar.TabStop = False
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Location = New System.Drawing.Point(605, 218)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(150, 20)
+        Me.txtBuscar.TabIndex = 65
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.CQR.UI.LOCAL.My.Resources.Resources.magnifier
+        Me.PictureBox1.Location = New System.Drawing.Point(761, 215)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(27, 31)
+        Me.PictureBox1.TabIndex = 66
+        Me.PictureBox1.TabStop = False
         '
         'dgServicios
         '
         Me.dgServicios.AllowUserToOrderColumns = True
         Me.dgServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgServicios.BackgroundColor = System.Drawing.Color.CornflowerBlue
+        Me.dgServicios.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.dgServicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken
         Me.dgServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkRed
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgServicios.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgServicios.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgServicios.GridColor = System.Drawing.Color.DarkBlue
-        Me.dgServicios.Location = New System.Drawing.Point(413, 218)
-        Me.dgServicios.MultiSelect = False
+        Me.dgServicios.Location = New System.Drawing.Point(397, 244)
         Me.dgServicios.Name = "dgServicios"
         Me.dgServicios.ReadOnly = True
         Me.dgServicios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        Me.dgServicios.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.CornflowerBlue
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        Me.dgServicios.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgServicios.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.dgServicios.Size = New System.Drawing.Size(375, 164)
-        Me.dgServicios.TabIndex = 58
+        Me.dgServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgServicios.Size = New System.Drawing.Size(394, 170)
+        Me.dgServicios.TabIndex = 67
         '
-        'btnActualizarForm
+        'Servicios
         '
-        Me.btnActualizarForm.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473957601_InterfaceExpendet_01
-        Me.btnActualizarForm.Location = New System.Drawing.Point(703, 388)
-        Me.btnActualizarForm.Name = "btnActualizarForm"
-        Me.btnActualizarForm.Size = New System.Drawing.Size(31, 36)
-        Me.btnActualizarForm.TabIndex = 59
-        Me.btnActualizarForm.TabStop = False
+        Me.Servicios.AutoSize = True
+        Me.Servicios.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Servicios.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Servicios.Location = New System.Drawing.Point(393, 220)
+        Me.Servicios.Name = "Servicios"
+        Me.Servicios.Size = New System.Drawing.Size(80, 21)
+        Me.Servicios.TabIndex = 68
+        Me.Servicios.Text = "Servicios"
         '
         'frmEmpresa
         '
@@ -369,12 +400,13 @@ Partial Class frmEmpresa
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(814, 448)
-        Me.Controls.Add(Me.btnActualizarForm)
+        Me.Controls.Add(Me.Servicios)
         Me.Controls.Add(Me.dgServicios)
-        Me.Controls.Add(Me.btnRegistrarServicio)
+        Me.Controls.Add(Me.txtBuscar)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnActualizarForm)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnEliminar)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.GroupBox1)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -382,11 +414,12 @@ Partial Class frmEmpresa
         Me.Text = "frmEmpresa"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.dgServicios, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnActualizarForm, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgServicios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -403,7 +436,6 @@ Partial Class frmEmpresa
     Friend WithEvents txtDescripcionServicio As TextBox
     Friend WithEvents txtCostoServicio As TextBox
     Friend WithEvents btnEliminar As AForge.Controls.PictureBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnNuevoEmpresa As Button
     Friend WithEvents btnRegistrarEmpresa As Button
@@ -417,6 +449,9 @@ Partial Class frmEmpresa
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtCedulaJuridica As TextBox
-    Friend WithEvents dgServicios As DataGridView
     Friend WithEvents btnActualizarForm As AForge.Controls.PictureBox
+    Friend WithEvents txtBuscar As TextBox
+    Friend WithEvents PictureBox1 As AForge.Controls.PictureBox
+    Friend WithEvents dgServicios As DataGridView
+    Friend WithEvents Servicios As Label
 End Class

@@ -31,16 +31,30 @@ Public Class frmEscaner
                 Me.Close()
 
                 Try
-                    Dim visitasAct = cliente.Visitas
                     'lstboxCodigos.Items.Add(clienteidx)
                     clienteidx = resultados(0).Remove(0, 1)
                     cliente = gestor.RetrievePorId(clienteidx)
+
+                    Dim visitasAct = cliente.Visitas
+
                     cliente.Visitas = cliente.Visitas + 1
+
+                    If cliente.Visitas >= 10 Then
+                        cliente.Premio = cliente.Premio + 1
+                        cliente.Visitas = 0
+                        MsgBox("Felicidades!, Acabas de ganar un servicio gratis en nuestro negocio!", MsgBoxStyle.Information)
+                    End If
 
                     Select Case MsgBox(cliente.Nombre & " ha visitado una vez mas tu negocio!" & Chr(13) & "Visitas actuales: " & visitasAct, MsgBoxStyle.YesNoCancel, "Confirmar accion")
                         Case MsgBoxResult.Yes
                             gestor.Update(cliente)
                             MessageBox.Show("Informacion actualizada exitosamente!" & Chr(13) & "El cliente ahora tiene " & cliente.Visitas & " visitas")
+
+                            Dim form As New frmSeleccionServicio
+                            form.lblCliente.Text = cliente.Cedula
+
+                            form.Show()
+
                         Case MsgBoxResult.Cancel
                             MessageBox.Show("Cancel action")
                         Case MsgBoxResult.No

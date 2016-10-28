@@ -24,7 +24,7 @@ namespace CQR.AccesoDatos.Mapper
                 Id = GetIntValue(row, DB_COL_ID),
                 Nombre = GetStringValue(row, DB_COL_NOMBRE),
                 Descripcion = GetStringValue(row, DB_COL_DESCRIPCION),
-                Costo = GetDoubleValue(row, DB_COL_COSTO)
+                Costo = GetDecimalValue(row, DB_COL_COSTO)             
             };
             return servicio;
         }
@@ -40,7 +40,7 @@ namespace CQR.AccesoDatos.Mapper
                     Id = GetIntValue(row, DB_COL_ID),
                     Nombre = GetStringValue(row, DB_COL_NOMBRE),
                     Descripcion = GetStringValue(row, DB_COL_DESCRIPCION),
-                    Costo = GetDoubleValue(row, DB_COL_COSTO)
+                    Costo = GetDecimalValue(row, DB_COL_COSTO)
                 };
                 lstResults.Add(servicio);
             }
@@ -54,10 +54,9 @@ namespace CQR.AccesoDatos.Mapper
 
             var u = (Servicio)entidad;
 
-            operation.AddIntParam(DB_COL_ID, u.Id);
             operation.AddVarcharParam(DB_COL_NOMBRE, u.Nombre);
             operation.AddVarcharParam(DB_COL_DESCRIPCION, u.Descripcion);
-            operation.AddDoubleParam(DB_COL_COSTO, u.Costo);
+            operation.AddDecimalParam(DB_COL_COSTO, u.Costo);
 
             return operation;
         }
@@ -116,7 +115,7 @@ namespace CQR.AccesoDatos.Mapper
             operation.AddIntParam(DB_COL_ID, u.Id);
             operation.AddVarcharParam(DB_COL_NOMBRE, u.Nombre);
             operation.AddVarcharParam(DB_COL_DESCRIPCION, u.Descripcion);
-            operation.AddDoubleParam(DB_COL_COSTO, u.Costo);
+            operation.AddDecimalParam(DB_COL_COSTO, u.Costo);
             
             return operation;
         }

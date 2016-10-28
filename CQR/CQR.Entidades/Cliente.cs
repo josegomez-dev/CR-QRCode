@@ -11,12 +11,13 @@ namespace CQR.Entidades
     {
         public string Cedula { get; set; }
         public string Nombre { get; set; }
+        public string PlacaActual { get; set; }
+        public string Profesion { get; set; }
         public string Telefono { get; set; }
         public string Correo { get; set; }
         public int Visitas { get; set; }
         public int Premio { get; set; }
-        public bool Habilitado { get; set; }
-        public String CodigoQR { get; set; }
+        public bool Vetado { get; set; }
 
         public Cliente()
         {

@@ -30,11 +30,48 @@ namespace CQR.API.CORE.Gestores
             }
         }
 
+        public void CreateQrCode(QrCode qr)
+        {
+            if (!string.IsNullOrEmpty(qr.Cliente))
+            {
+                _crudFactory.CreateQrCode(qr);
+            }
+            else
+            {
+                throw new Exception();
+            }
+        }
+
+
         public void Update(Cliente cliente)
         {
             if (!string.IsNullOrEmpty(Convert.ToString(cliente.Cedula)))
             {
                 _crudFactory.Update(cliente);
+            }
+            else
+            {
+                throw new Exception();
+            }
+
+        }
+
+        public void Delete(Cliente cliente, QrCode qr)
+        {
+            if (!string.IsNullOrEmpty(Convert.ToString(qr.Cliente)))
+            {
+                // DELETE QRCODE
+                _crudFactory.DeleteQrCode(qr);
+            
+                if (!string.IsNullOrEmpty(Convert.ToString(cliente.Cedula)))
+                {
+                    // DELETE CLIENTE
+                    _crudFactory.Delete(cliente);
+                }
+                else
+                {
+                    throw new Exception();
+                }
             }
             else
             {
@@ -53,7 +90,6 @@ namespace CQR.API.CORE.Gestores
             {
                 throw new Exception();
             }
-
         }
 
         public Cliente RetrievePorId(string id)
@@ -62,11 +98,21 @@ namespace CQR.API.CORE.Gestores
 
             return _crudFactory.Retrieve<Cliente>(Convert.ToString(cliente.Cedula));
         }
+        public QrCode RetrieveQRCodePorId(string cedulaCliente)
+        {
+            var qr = new QrCode { Cliente = cedulaCliente };
+
+            return _crudFactory.RetrieveQr<QrCode>(qr.Cliente);
+        }
 
         public List<Cliente> RetrieveAll()
         {
             return _crudFactory.RetrieveAll<Cliente>();
         }
-       
+
+        public List<Cliente> searchLike(string text)
+        {
+            return _crudFactory.SearchLike<Cliente>(text);
+        }
     }
 }

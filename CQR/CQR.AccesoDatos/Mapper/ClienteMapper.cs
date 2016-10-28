@@ -14,11 +14,13 @@ namespace CQR.AccesoDatos.Mapper
     {
         private const string DB_COL_CEDULA = "CEDULA";
         private const string DB_COL_NOMBRE = "NOMBRE";
+        private const string DB_COL_PLACA = "PLACA";
+        private const string DB_COL_PROFESION = "PROFESION";
         private const string DB_COL_TELEFONO = "TELEFONO";
         private const string DB_COL_CORREO = "CORREO";
         private const string DB_COL_VISITAS = "VISITAS";
         private const string DB_COL_PREMIO = "PREMIO";
-        private const string DB_COL_HABILITADO = "HABILITADO";
+        private const string DB_COL_CONFIABLE = "CONFIABLE";
 
 
         public EntidadBase BuildObject(Dictionary<string, object> row)
@@ -27,14 +29,28 @@ namespace CQR.AccesoDatos.Mapper
             {
                 Cedula = GetStringValue(row, DB_COL_CEDULA),
                 Nombre = GetStringValue(row, DB_COL_NOMBRE),
+                PlacaActual = GetStringValue(row, DB_COL_PLACA),
+                Profesion = GetStringValue(row, DB_COL_PROFESION),
                 Telefono = GetStringValue(row, DB_COL_TELEFONO),
                 Correo = GetStringValue(row, DB_COL_CORREO),
                 Visitas = GetIntValue(row, DB_COL_VISITAS),
-                Premio = GetIntValue(row, DB_COL_PREMIO)
-                //Habilitado = GetBoolValue(row, DB_COL_HABILITADO)
+                Premio = GetIntValue(row, DB_COL_PREMIO),
+                Vetado = GetBooleanValue(row, DB_COL_CONFIABLE)
             };
             return cliente;
         }
+
+        public object BuildObjectQr(Dictionary<string, object> row)
+        {
+            var qr = new QrCode
+            {
+                Id = GetIntValue(row, "ID"),
+                Cliente = GetStringValue(row, "CLIENTE"),
+                Qrcode = (byte[])GetByteArrayValue(row, "QRCODE")
+            };
+            return qr;
+        }
+
 
         public List<EntidadBase> BuildObjects(List<Dictionary<string, object>> lstRows)
         {
@@ -46,17 +62,20 @@ namespace CQR.AccesoDatos.Mapper
                 {
                     Cedula = GetStringValue(row, DB_COL_CEDULA),
                     Nombre = GetStringValue(row, DB_COL_NOMBRE),
+                    PlacaActual = GetStringValue(row, DB_COL_PLACA),
+                    Profesion = GetStringValue(row, DB_COL_PROFESION),
                     Telefono = GetStringValue(row, DB_COL_TELEFONO),
                     Correo = GetStringValue(row, DB_COL_CORREO),
                     Visitas = GetIntValue(row, DB_COL_VISITAS),
-                    Premio = GetIntValue(row, DB_COL_PREMIO)
-                    //Habilitado = GetBoolValue(row, DB_COL_HABILITADO)
+                    Premio = GetIntValue(row, DB_COL_PREMIO),
+                    Vetado = GetBooleanValue(row, DB_COL_CONFIABLE)
                 };
                 lstResults.Add(cliente);
             }
 
             return lstResults;
         }
+
 
         public SqlOperation GetCreateStatement(EntidadBase entidad)
         {
@@ -66,10 +85,31 @@ namespace CQR.AccesoDatos.Mapper
 
             operation.AddVarcharParam(DB_COL_CEDULA, u.Cedula);
             operation.AddVarcharParam(DB_COL_NOMBRE, u.Nombre);
+            operation.AddVarcharParam(DB_COL_PLACA, u.PlacaActual);
+            operation.AddVarcharParam(DB_COL_PROFESION, u.Profesion);
             operation.AddVarcharParam(DB_COL_TELEFONO, u.Telefono);
             operation.AddVarcharParam(DB_COL_CORREO, u.Correo);
-            operation.AddIntParam(DB_COL_VISITAS, u.Visitas);
-            operation.AddIntParam(DB_COL_PREMIO, u.Premio);
+
+            return operation;
+        }
+
+        internal SqlOperation GetRetrieveBySearchLikeStatement(string textoIngresado)
+        {
+            var operation = new SqlOperation { ProcedureName = "SEARCH_CLIENTE_PR" };
+
+            operation.AddVarcharParam(DB_COL_CEDULA, textoIngresado);
+
+            return operation;
+        }
+
+        public SqlOperation GetCreateQrCodeStatement(EntidadBase entidad)
+        {
+            var operation = new SqlOperation { ProcedureName = "CRE_QRCODE_PR" };
+
+            var u = (QrCode) entidad;
+            
+            operation.AddVarcharParam("CLIENTE", u.Cliente);
+            operation.AddByteArrayParam("QRCODE", u.Qrcode);
 
             return operation;
         }
@@ -82,14 +122,26 @@ namespace CQR.AccesoDatos.Mapper
 
             operation.AddVarcharParam(DB_COL_CEDULA, u.Cedula);
             operation.AddVarcharParam(DB_COL_NOMBRE, u.Nombre);
+            operation.AddVarcharParam(DB_COL_PLACA, u.PlacaActual);
+            operation.AddVarcharParam(DB_COL_PROFESION, u.Profesion);
             operation.AddVarcharParam(DB_COL_TELEFONO, u.Telefono);
             operation.AddVarcharParam(DB_COL_CORREO, u.Correo);
             operation.AddIntParam(DB_COL_VISITAS, u.Visitas);
             operation.AddIntParam(DB_COL_PREMIO, u.Premio);
+            operation.AddBooleanParam(DB_COL_CONFIABLE, u.Vetado);
 
             return operation;
         }
 
+        public SqlOperation GetRetriveQrByCedulaClienteStatement(string cliente)
+        {
+            var operation = new SqlOperation { ProcedureName = "RET_QRCODE_PR" };
+
+            // COL CLIENTE FROM QRCODE TABLE
+            operation.AddVarcharParam("CLIENTE", cliente);
+
+            return operation;
+        }
         public SqlOperation GetRetriveByIdStatement(string id)
         {
             var operation = new SqlOperation { ProcedureName = "RET_CLIENTE_PR" };
@@ -125,6 +177,17 @@ namespace CQR.AccesoDatos.Mapper
 
             return operation;
         } 
+        public SqlOperation GetDeleteQrCodeStatement(EntidadBase entidad)
+        {
+            var operation = new SqlOperation { ProcedureName = "DEL_QRCODE_PR" };
+
+            var u = (QrCode)entidad;
+
+            // COL CLIENTE FROM QRCODE TABLE
+            operation.AddVarcharParam("CLIENTE", u.Cliente);
+
+            return operation;
+        }
 
     }
 }

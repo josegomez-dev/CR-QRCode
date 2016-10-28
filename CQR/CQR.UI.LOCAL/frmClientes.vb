@@ -1,4 +1,5 @@
-﻿Imports CQR.API.CORE.Gestores
+﻿Imports System.IO
+Imports CQR.API.CORE.Gestores
 Imports CQR.Entidades
 
 Public Class frmClientes
@@ -9,21 +10,13 @@ Public Class frmClientes
 
     Function cargar_tablaClientes()
 
-        dgClientes.Rows.Clear()
-
         Dim gestor As New GestorCliente(user)
         Dim lst As List(Of Cliente)
 
         lst = gestor.RetrieveAll()
 
-        Dim data_table As String() = {"Cedula", "Nombre", "Telefono", "Correo", "Visitas", "Premio"}
-        buildTableData(dgClientes, data_table)
 
-        If lst IsNot Nothing Then
-            For Each item In lst
-                dgClientes.Rows.Add(item.Cedula, item.Nombre, item.Telefono, item.Correo, item.Visitas, item.Premio)
-            Next
-        End If
+        dgClientes.DataSource = lst
 
         Return 0
     End Function
@@ -39,7 +32,7 @@ Public Class frmClientes
         Return 0
     End Function
 
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs)
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
 
         Dim gestor As New GestorCliente(user)
 
@@ -50,10 +43,16 @@ Public Class frmClientes
             Dim cl = New Cliente()
             cl.Cedula = idCliente
 
-            gestor.Delete(cl)
+            Dim qr As QrCode = gestor.RetrieveQRCodePorId(cl.Cedula)
+
+            If qr IsNot Nothing Then
+                gestor.Delete(cl, qr)
+            Else
+                gestor.Delete(cl)
+            End If
 
             limpiarFormulario()
-            MsgBox("Cliente eliminado con exito", MsgBoxStyle.Exclamation)
+            MsgBox("Cliente eliminado con exito", MsgBoxStyle.Information)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -75,11 +74,74 @@ Public Class frmClientes
 
         Dim rowIndex As Integer = dgClientes.CurrentRow.Index
 
-        txtNombre.Text = dgClientes.Item(1, rowIndex).Value
-        txtTelefono.Text = dgClientes.Item(2, rowIndex).Value
-        txtCorreo.Text = dgClientes.Item(3, rowIndex).Value
-        txtVisitas.Value = dgClientes.Item(4, rowIndex).Value
-        txtPremio.Value = dgClientes.Item(5, rowIndex).Value
+        Dim gestor As New GestorCliente(user)
+        Dim cliente As New Cliente
+
+        Try
+
+            If dgClientes.Item(0, rowIndex).Value IsNot Nothing Then
+
+                cliente = gestor.RetrievePorId(dgClientes.Item(0, rowIndex).Value)
+
+                txtNombre.Text = cliente.Nombre
+                txtTelefono.Text = cliente.Telefono
+                txtCorreo.Text = cliente.Correo
+                txtPlaca.Text = cliente.PlacaActual
+                txtProfesion.Text = cliente.Profesion
+                txtVisitas.Value = cliente.Visitas
+                txtPremio.Value = cliente.Premio
+
+                ' DRAW CLIENT QRCODE
+                drawAvatar(QrCodeImgControl1)
+
+                checkedColor(cliente.Vetado)
+
+            End If
+
+        Catch ex As Exception
+            If String.IsNullOrEmpty(ex.Message) Then
+                MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+            Else
+                MsgBox("Este cliente no tiene un Codigo Asignado", MsgBoxStyle.Exclamation)
+            End If
+        End Try
+
+    End Sub
+
+    Private Sub checkedColor(vetado As Boolean)
+
+        If Not vetado Then
+            btnCambiarConfiabilidad.BackColor = Color.Blue
+            dgClientes.RowsDefaultCellStyle.SelectionBackColor = Color.Blue
+        Else
+            btnCambiarConfiabilidad.BackColor = Color.Firebrick
+            dgClientes.RowsDefaultCellStyle.SelectionBackColor = Color.Firebrick
+        End If
+
+    End Sub
+
+    Private Function fetchAvatar(cliente As String) As Byte()
+
+        Dim gestor As New GestorCliente(user)
+        Dim qr As QrCode = gestor.RetrieveQRCodePorId(cliente)
+
+        Dim buffer As Byte() = qr.Qrcode
+
+        Return buffer
+    End Function
+    Private Sub drawAvatar(PB As PictureBox)
+
+        Dim rowIndex As Integer = dgClientes.CurrentRow.Index
+
+        Dim buffer As Byte() = fetchAvatar(dgClientes.Item(0, rowIndex).Value)
+
+        ' STREAM IMAGE DATA TO PICTUREBOX
+        If buffer IsNot Nothing Then
+            Using ms As New MemoryStream(buffer, 0, buffer.Length)
+                ms.Write(buffer, 0, buffer.Length)
+                PB.Image = Image.FromStream(ms, True)
+            End Using
+        End If
 
     End Sub
 
@@ -91,25 +153,31 @@ Public Class frmClientes
         Dim rowIndex As Integer = dgClientes.CurrentRow.Index
         Dim primaryKey As String = dgClientes.Item(0, rowIndex).Value
 
-        Try
+        If Not (txtNombre.Text.Equals("") Or txtTelefono.Text.Equals("") Or txtCorreo.Text.Equals("") Or txtPlaca.Text.Equals("") Or txtProfesion.Text.Equals("")) Then
 
-            cliente = gestor.RetrievePorId(primaryKey)
+            Try
 
-            cliente.Nombre = txtNombre.Text
-            cliente.Telefono = txtTelefono.Text
-            cliente.Correo = txtCorreo.Text
-            cliente.Visitas = txtVisitas.Value
-            cliente.Premio = txtPremio.Value
+                cliente = gestor.RetrievePorId(primaryKey)
 
-            gestor.Update(cliente)
+                cliente.Nombre = txtNombre.Text
+                cliente.Telefono = txtTelefono.Text
+                cliente.Correo = txtCorreo.Text
+                cliente.PlacaActual = txtPlaca.Text
+                cliente.Profesion = txtProfesion.Text
+                cliente.Visitas = txtVisitas.Value
+                cliente.Premio = txtPremio.Value
 
-            MsgBox("Cliente actualizado con exito", MsgBoxStyle.Information)
+                gestor.Update(cliente)
 
-        Catch ex As Exception
+                MsgBox("Cliente actualizado con exito", MsgBoxStyle.Information)
 
-            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+            End Try
 
-        End Try
+        Else
+            MsgBox("Rellene los campos vacios", MsgBoxStyle.Exclamation)
+        End If
 
         cargar_tablaClientes()
 
@@ -117,5 +185,63 @@ Public Class frmClientes
 
     Private Sub btnActualizarForm_Click(sender As Object, e As EventArgs) Handles btnActualizarForm.Click
         cargar_tablaClientes()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCambiarConfiabilidad.Click
+
+        Select Case MsgBox("Desea cambiar el estado del cliente?", MsgBoxStyle.YesNoCancel, "Confirmar accion")
+            Case MsgBoxResult.Yes
+
+                Dim rowIndex As Integer = dgClientes.CurrentRow.Index
+
+                Dim gestor As New GestorCliente(user)
+                Dim cliente As New Cliente
+
+                Try
+
+                    If dgClientes.Item(0, rowIndex).Value IsNot Nothing Then
+
+                        cliente = gestor.RetrievePorId(dgClientes.Item(0, rowIndex).Value)
+
+                        If cliente.Vetado Then
+                            cliente.Vetado = False
+                        Else
+                            cliente.Vetado = True
+                        End If
+
+                        gestor.Update(cliente)
+
+                        cargar_tablaClientes()
+
+                    End If
+
+                    checkedColor(cliente.Vetado)
+
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+                End Try
+
+            Case MsgBoxResult.Cancel
+
+            Case MsgBoxResult.No
+
+        End Select
+
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
+
+        Dim gestor As New GestorCliente(user)
+        Dim lst As New List(Of Cliente)
+
+        lst = gestor.searchLike(txtBuscar.Text)
+
+        dgClientes.DataSource = lst
+
+    End Sub
+
+    Private Sub dgClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgClientes.CellContentClick
+
     End Sub
 End Class

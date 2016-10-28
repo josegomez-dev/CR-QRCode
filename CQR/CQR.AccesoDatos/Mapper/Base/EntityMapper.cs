@@ -35,6 +35,14 @@ namespace CQR.AccesoDatos.Mapper.Base
 
             return -1m;
         }
+        protected bool GetBooleanValue(Dictionary<string, object> dic, string attName)
+        {
+            var val = dic[attName];
+            if (dic.ContainsKey(attName) && val is bool)
+                return (bool)dic[attName];
+
+            return false;
+        }
 
         protected float GetFloatValue(Dictionary<string, object> dic, string attName)
         {
@@ -53,7 +61,7 @@ namespace CQR.AccesoDatos.Mapper.Base
 
             return -1;
         }
-
+        
         protected DateTime GetDateValue(Dictionary<string, object> dic, string attName)
         {
             var val = dic[attName];
@@ -61,6 +69,15 @@ namespace CQR.AccesoDatos.Mapper.Base
                 return (DateTime)dic[attName];
 
             return DateTime.Now;
+        }
+
+        protected byte[] GetByteArrayValue(Dictionary<string, object> dic, string attName)
+        {
+            var val = dic[attName];
+            if (dic.ContainsKey(attName) && val is byte[])
+                return (byte[])dic[attName];
+
+            return null;
         }
 
         protected ExceptionCode GetExceptionCodeValue(Dictionary<string, object> dic, string attName)
