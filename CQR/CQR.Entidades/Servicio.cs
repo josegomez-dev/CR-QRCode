@@ -12,7 +12,7 @@ namespace CQR.Entidades
         public int Id;
         public string Nombre;
         public string Descripcion;
-        public double Costo;
+        public decimal Costo;
 
         public Servicio()
         {

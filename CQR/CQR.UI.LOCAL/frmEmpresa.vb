@@ -21,19 +21,9 @@ Public Class frmEmpresa
             gestor.Update(empresa)
             MsgBox("Informacion registrada exitosamente!", MsgBoxStyle.Information)
 
-            actualizar_informacion_empresa()
-
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
         End Try
-
-        limpiarInputsEmpresa()
-
-    End Sub
-
-    Private Sub actualizar_informacion_empresa()
-
-        MsgBox("Actualizar informacion del padre")
 
     End Sub
 
@@ -91,19 +81,24 @@ Public Class frmEmpresa
         Dim gestor As New GestorServicio(user)
         Dim lst As New List(Of Servicio)
 
-        lst = gestor.RetrieveAll()
+        Try
+            lst = gestor.RetrieveAll()
 
-        Dim data_table As String() = {"Nombre", "Descripcion", "Costo"}
-        buildTableData(dgServicios, data_table)
+            Dim data_table As String() = {"Nombre", "Descripcion", "Costo"}
 
-        If lst IsNot Nothing Then
+            buildTableData(dgServicios, data_table)
 
-            For Each item In lst
-                dgServicios.Rows.Add(item.Nombre, item.Descripcion, item.Costo)
-            Next
+            If lst IsNot Nothing Then
 
-        End If
+                For Each item In lst
+                    dgServicios.Rows.Add(item.Nombre, item.Descripcion, item.Costo)
+                Next
 
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+        End Try
     End Sub
     Private Sub CellValueChanged(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles dgServicios.CellClick
 
@@ -172,9 +167,14 @@ Public Class frmEmpresa
 
             gestor.Create(servicio)
 
+            MsgBox("Servicio registrado exitosamente!", MsgBoxStyle.Information)
+            limpiarInputsServicio()
+            dgServicios_load()
+
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
         End Try
 
     End Sub
+
 End Class

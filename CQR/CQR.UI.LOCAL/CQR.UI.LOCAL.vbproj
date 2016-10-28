@@ -125,6 +125,12 @@
     <Compile Include="frmRegistrarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSeleccionServicio.Designer.vb">
+      <DependentUpon>frmSeleccionServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeleccionServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSplash.Designer.vb">
       <DependentUpon>frmSplash.vb</DependentUpon>
     </Compile>
@@ -146,6 +152,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="frmReporteVentas.Designer.vb">
+      <DependentUpon>frmReporteVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReporteVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmClientes.resx">
@@ -163,6 +175,9 @@
     <EmbeddedResource Include="frmRegistrarCliente.resx">
       <DependentUpon>frmRegistrarCliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSeleccionServicio.resx">
+      <DependentUpon>frmSeleccionServicio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.vb</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +186,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteVentas.resx">
+      <DependentUpon>frmReporteVentas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1473957825_icon-130-cloud-upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

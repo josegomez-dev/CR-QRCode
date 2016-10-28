@@ -124,14 +124,17 @@
   <data name="Coyote-Car-Wash-final-RGB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Coyote-Car-Wash-final-RGB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1473957825_icon-130-cloud-upload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1473957825_icon-130-cloud-upload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="colori-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\colori-11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1473950454_bookmark-new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1473950454_bookmark-new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1473957601_InterfaceExpendet-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1473957601_InterfaceExpendet-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1473950454_bookmark-new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1473950454_bookmark-new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1473947706_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1473947706_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,7 +148,7 @@
   <data name="1473950306_edit-delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1473950306_edit-delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1473957825_icon-130-cloud-upload" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1473957825_icon-130-cloud-upload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="magnifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magnifier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

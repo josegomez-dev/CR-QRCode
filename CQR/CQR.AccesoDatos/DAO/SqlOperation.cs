@@ -36,6 +36,15 @@ namespace CQR.AccesoDatos.DAO
             };
             Parameters.Add(param);
         }
+        public void AddBooleanParam(string paramName, bool paramValue)
+        {
+            var param = new SqlParameter("@P_" + paramName, SqlDbType.Bit)
+            {
+                Value = paramValue
+
+            };
+            Parameters.Add(param);
+        }
         public void AddDecimalParam(string paramName, decimal paramValue)
         {
             var param = new SqlParameter("@P_" + paramName, SqlDbType.Decimal)
@@ -66,6 +75,15 @@ namespace CQR.AccesoDatos.DAO
         public void AddDateTimeParam(string paramName, DateTime paramValue)
         {
             var param = new SqlParameter("@P_" + paramName, SqlDbType.DateTime)
+            {
+                Value = paramValue
+
+            };
+            Parameters.Add(param);
+        }
+        public void AddByteArrayParam(string paramName, byte[] paramValue)
+        {
+            var param = new SqlParameter("@P_" + paramName, SqlDbType.Image)
             {
                 Value = paramValue
 

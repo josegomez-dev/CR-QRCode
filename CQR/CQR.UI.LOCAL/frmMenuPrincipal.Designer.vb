@@ -57,7 +57,7 @@ Partial Class frmMenuPrincipal
         '
         Me.SplitContainer1.Panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.SplitContainer1.Panel1.AllowDrop = True
-        Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.White
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnClientes)
@@ -109,7 +109,7 @@ Partial Class frmMenuPrincipal
         Me.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClientes.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClientes.ForeColor = System.Drawing.Color.SteelBlue
+        Me.btnClientes.ForeColor = System.Drawing.Color.White
         Me.btnClientes.Location = New System.Drawing.Point(0, 274)
         Me.btnClientes.Name = "btnClientes"
         Me.btnClientes.Size = New System.Drawing.Size(225, 35)
@@ -132,7 +132,7 @@ Partial Class frmMenuPrincipal
         Me.btnSeguridad.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSeguridad.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeguridad.ForeColor = System.Drawing.Color.SteelBlue
+        Me.btnSeguridad.ForeColor = System.Drawing.Color.White
         Me.btnSeguridad.Location = New System.Drawing.Point(0, 370)
         Me.btnSeguridad.Name = "btnSeguridad"
         Me.btnSeguridad.Size = New System.Drawing.Size(225, 35)
@@ -158,7 +158,7 @@ Partial Class frmMenuPrincipal
         Me.btnEmpresa.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEmpresa.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEmpresa.ForeColor = System.Drawing.Color.SteelBlue
+        Me.btnEmpresa.ForeColor = System.Drawing.Color.White
         Me.btnEmpresa.Location = New System.Drawing.Point(0, 306)
         Me.btnEmpresa.Name = "btnEmpresa"
         Me.btnEmpresa.Size = New System.Drawing.Size(225, 35)
@@ -222,7 +222,7 @@ Partial Class frmMenuPrincipal
         Me.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReportes.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReportes.ForeColor = System.Drawing.Color.SteelBlue
+        Me.btnReportes.ForeColor = System.Drawing.Color.White
         Me.btnReportes.Location = New System.Drawing.Point(0, 338)
         Me.btnReportes.Name = "btnReportes"
         Me.btnReportes.Size = New System.Drawing.Size(225, 35)

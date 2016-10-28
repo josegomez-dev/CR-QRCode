@@ -45,6 +45,7 @@
     <Compile Include="Gestores\GestorCliente.cs" />
     <Compile Include="Gestores\GestorEmpresa.cs" />
     <Compile Include="Gestores\GestorMensaje.cs" />
+    <Compile Include="Gestores\GestorReporteVentas.cs" />
     <Compile Include="Gestores\GestorServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
