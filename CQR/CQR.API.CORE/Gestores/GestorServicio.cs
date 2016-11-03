@@ -18,11 +18,11 @@ namespace CQR.API.CORE.Gestores
             _crudFactory = new ServicioCrudFactory();
         }
 
-        public void Create(Servicio servicio)
+        public void Create(Servicio entidad)
         {
-            if (!string.IsNullOrEmpty(Convert.ToString(servicio.Id)))
+            if (!string.IsNullOrEmpty(Convert.ToString(entidad.Id)))
             {
-                _crudFactory.Create(servicio);
+                _crudFactory.Create(entidad);
             }
             else
             {
@@ -30,11 +30,11 @@ namespace CQR.API.CORE.Gestores
             }
         }
 
-        public void Update(Servicio servicio)
+        public void Update(Servicio entidad)
         {
-            if (!string.IsNullOrEmpty(Convert.ToString(servicio.Id)))
+            if (!string.IsNullOrEmpty(Convert.ToString(entidad.Id)))
             {
-                _crudFactory.Update(servicio);
+                _crudFactory.Update(entidad);
             }
             else
             {
@@ -43,11 +43,11 @@ namespace CQR.API.CORE.Gestores
 
         }
 
-        public void Delete(Servicio servicio)
+        public void Delete(Servicio entidad)
         {
-            if (!string.IsNullOrEmpty(Convert.ToString(servicio.Id)))
+            if (!string.IsNullOrEmpty(Convert.ToString(entidad.Id)))
             {
-                _crudFactory.Delete(servicio);
+                _crudFactory.Delete(entidad);
             }
             else
             {
@@ -55,11 +55,11 @@ namespace CQR.API.CORE.Gestores
             }
         }
 
-        public void DeleteByNombre(Servicio servicio)
+        public void DeleteByNombre(Servicio entidad)
         {
-            if (!string.IsNullOrEmpty(Convert.ToString(servicio.Nombre)))
+            if (!string.IsNullOrEmpty(Convert.ToString(entidad.Nombre)))
             {
-                _crudFactory.DeleteByNombre(servicio);
+                _crudFactory.DeleteByNombre(entidad);
             }
             else
             {
@@ -69,9 +69,9 @@ namespace CQR.API.CORE.Gestores
 
         public Servicio RetrievePorId(string id)
         {
-            var servicio = new Servicio { Id = Convert.ToInt32(id) };
+            var entidad = new Servicio { Id = Convert.ToInt32(id) };
 
-            return _crudFactory.Retrieve<Servicio>(Convert.ToString(servicio.Id));
+            return _crudFactory.Retrieve<Servicio>(Convert.ToString(entidad.Id));
         }
 
         public List<Servicio> RetrieveAll()

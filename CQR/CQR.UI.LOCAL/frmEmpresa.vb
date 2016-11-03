@@ -140,7 +140,7 @@ Public Class frmEmpresa
             gestor.DeleteByNombre(s)
 
             limpiarInputsServicio()
-            MsgBox("Cliente eliminado con exito", MsgBoxStyle.Exclamation)
+            MsgBox("Servicio eliminado con exito", MsgBoxStyle.Exclamation)
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -161,14 +161,21 @@ Public Class frmEmpresa
 
         Try
 
-            servicio.Nombre = txtNombreServicio.Text
-            servicio.Descripcion = txtDescripcionServicio.Text
-            servicio.Costo = txtCostoServicio.Text
+            If txtNombreServicio.Text <> "" And txtDescripcionServicio.Text <> "" And txtCostoServicio.Text <> "" Then
 
-            gestor.Create(servicio)
+                servicio.Nombre = txtNombreServicio.Text
+                servicio.Descripcion = txtDescripcionServicio.Text
+                servicio.Costo = txtCostoServicio.Text
 
-            MsgBox("Servicio registrado exitosamente!", MsgBoxStyle.Information)
-            limpiarInputsServicio()
+                gestor.Create(servicio)
+
+                limpiarInputsServicio()
+
+                MsgBox("Servicio registrado exitosamente!", MsgBoxStyle.Information)
+            Else
+                MsgBox("Ingrese los espacios en blanco!", MsgBoxStyle.Exclamation)
+            End If
+
             dgServicios_load()
 
         Catch ex As Exception

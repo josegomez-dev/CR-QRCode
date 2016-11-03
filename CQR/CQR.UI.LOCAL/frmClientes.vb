@@ -241,7 +241,4 @@ Public Class frmClientes
 
     End Sub
 
-    Private Sub dgClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgClientes.CellContentClick
-
-    End Sub
 End Class

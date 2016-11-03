@@ -22,8 +22,8 @@ Partial Class frmClientes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmClientes))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -66,7 +66,6 @@ Partial Class frmClientes
         Me.GroupBox1.Controls.Add(Me.txtProfesion)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtPlaca)
-        Me.GroupBox1.Controls.Add(Me.btnActualizar)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label9)
@@ -77,10 +76,10 @@ Partial Class frmClientes
         Me.GroupBox1.Controls.Add(Me.txtVisitas)
         Me.GroupBox1.Controls.Add(Me.txtTelefono)
         Me.GroupBox1.Controls.Add(Me.txtCorreo)
-        Me.GroupBox1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.GroupBox1.Location = New System.Drawing.Point(29, 16)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.DarkTurquoise
+        Me.GroupBox1.Location = New System.Drawing.Point(31, 27)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(531, 165)
+        Me.GroupBox1.Size = New System.Drawing.Size(531, 125)
         Me.GroupBox1.TabIndex = 43
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informacion del Cliente"
@@ -88,18 +87,18 @@ Partial Class frmClientes
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label2.Location = New System.Drawing.Point(282, 56)
+        Me.Label2.Font = New System.Drawing.Font("Consolas", 9.75!)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(265, 59)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 19)
+        Me.Label2.Size = New System.Drawing.Size(70, 15)
         Me.Label2.TabIndex = 51
         Me.Label2.Text = "Profesion"
         '
         'txtProfesion
         '
         Me.txtProfesion.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtProfesion.Location = New System.Drawing.Point(357, 62)
+        Me.txtProfesion.Location = New System.Drawing.Point(344, 62)
         Me.txtProfesion.Name = "txtProfesion"
         Me.txtProfesion.Size = New System.Drawing.Size(154, 13)
         Me.txtProfesion.TabIndex = 52
@@ -107,31 +106,31 @@ Partial Class frmClientes
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label3.Location = New System.Drawing.Point(302, 25)
+        Me.Label3.Font = New System.Drawing.Font("Consolas", 9.75!)
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(293, 35)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 19)
+        Me.Label3.Size = New System.Drawing.Size(42, 15)
         Me.Label3.TabIndex = 49
         Me.Label3.Text = "Placa"
         '
         'txtPlaca
         '
         Me.txtPlaca.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPlaca.Location = New System.Drawing.Point(357, 29)
+        Me.txtPlaca.Location = New System.Drawing.Point(344, 37)
         Me.txtPlaca.Name = "txtPlaca"
         Me.txtPlaca.Size = New System.Drawing.Size(154, 13)
         Me.txtPlaca.TabIndex = 50
         '
         'btnActualizar
         '
-        Me.btnActualizar.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnActualizar.BackColor = System.Drawing.Color.DarkTurquoise
         Me.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnActualizar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnActualizar.Font = New System.Drawing.Font("Consolas", 10.25!)
         Me.btnActualizar.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.btnActualizar.Location = New System.Drawing.Point(1, 129)
+        Me.btnActualizar.Location = New System.Drawing.Point(407, 143)
         Me.btnActualizar.Name = "btnActualizar"
-        Me.btnActualizar.Size = New System.Drawing.Size(530, 36)
+        Me.btnActualizar.Size = New System.Drawing.Size(125, 33)
         Me.btnActualizar.TabIndex = 48
         Me.btnActualizar.Text = "Actualizar Informacion"
         Me.btnActualizar.UseVisualStyleBackColor = False
@@ -139,62 +138,62 @@ Partial Class frmClientes
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label7.Location = New System.Drawing.Point(33, 25)
+        Me.Label7.Font = New System.Drawing.Font("Consolas", 9.75!)
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(43, 36)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(64, 19)
+        Me.Label7.Size = New System.Drawing.Size(49, 15)
         Me.Label7.TabIndex = 27
         Me.Label7.Text = "Nombre"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label8.Location = New System.Drawing.Point(404, 89)
+        Me.Label8.Font = New System.Drawing.Font("Consolas", 9.75!)
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(404, 86)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(55, 19)
+        Me.Label8.Size = New System.Drawing.Size(49, 15)
         Me.Label8.TabIndex = 36
         Me.Label8.Text = "Premio"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label9.Location = New System.Drawing.Point(31, 53)
+        Me.Label9.Font = New System.Drawing.Font("Consolas", 9.75!)
+        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.Location = New System.Drawing.Point(29, 61)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(66, 19)
+        Me.Label9.Size = New System.Drawing.Size(63, 15)
         Me.Label9.TabIndex = 28
         Me.Label9.Text = "Telefono"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label10.Location = New System.Drawing.Point(291, 89)
+        Me.Label10.Font = New System.Drawing.Font("Consolas", 9.75!)
+        Me.Label10.ForeColor = System.Drawing.Color.Black
+        Me.Label10.Location = New System.Drawing.Point(282, 86)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(49, 19)
+        Me.Label10.Size = New System.Drawing.Size(56, 15)
         Me.Label10.TabIndex = 35
         Me.Label10.Text = "Visitas"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label11.Location = New System.Drawing.Point(42, 83)
+        Me.Label11.Font = New System.Drawing.Font("Consolas", 9.75!)
+        Me.Label11.ForeColor = System.Drawing.Color.Black
+        Me.Label11.Location = New System.Drawing.Point(43, 87)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(55, 19)
+        Me.Label11.Size = New System.Drawing.Size(49, 15)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Correo"
         '
         'txtPremio
         '
         Me.txtPremio.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPremio.Location = New System.Drawing.Point(465, 92)
+        Me.txtPremio.Location = New System.Drawing.Point(460, 86)
         Me.txtPremio.Name = "txtPremio"
         Me.txtPremio.Size = New System.Drawing.Size(48, 16)
         Me.txtPremio.TabIndex = 34
@@ -204,7 +203,7 @@ Partial Class frmClientes
         Me.txtNombre.BackColor = System.Drawing.SystemColors.Window
         Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtNombre.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txtNombre.Location = New System.Drawing.Point(101, 29)
+        Me.txtNombre.Location = New System.Drawing.Point(100, 38)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(154, 13)
         Me.txtNombre.TabIndex = 30
@@ -212,7 +211,7 @@ Partial Class frmClientes
         'txtVisitas
         '
         Me.txtVisitas.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtVisitas.Location = New System.Drawing.Point(346, 92)
+        Me.txtVisitas.Location = New System.Drawing.Point(346, 86)
         Me.txtVisitas.Name = "txtVisitas"
         Me.txtVisitas.Size = New System.Drawing.Size(48, 16)
         Me.txtVisitas.TabIndex = 33
@@ -220,7 +219,7 @@ Partial Class frmClientes
         'txtTelefono
         '
         Me.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTelefono.Location = New System.Drawing.Point(101, 59)
+        Me.txtTelefono.Location = New System.Drawing.Point(100, 63)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(154, 13)
         Me.txtTelefono.TabIndex = 31
@@ -237,8 +236,8 @@ Partial Class frmClientes
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label1.Location = New System.Drawing.Point(27, 209)
+        Me.Label1.ForeColor = System.Drawing.Color.OrangeRed
+        Me.Label1.Location = New System.Drawing.Point(28, 198)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(146, 21)
         Me.Label1.TabIndex = 41
@@ -251,64 +250,64 @@ Partial Class frmClientes
         Me.dgClientes.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.dgClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken
         Me.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgClientes.DefaultCellStyle = DataGridViewCellStyle1
-        Me.dgClientes.GridColor = System.Drawing.Color.DarkBlue
-        Me.dgClientes.Location = New System.Drawing.Point(30, 233)
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.OrangeRed
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgClientes.DefaultCellStyle = DataGridViewCellStyle7
+        Me.dgClientes.GridColor = System.Drawing.Color.White
+        Me.dgClientes.Location = New System.Drawing.Point(31, 222)
         Me.dgClientes.Name = "dgClientes"
         Me.dgClientes.ReadOnly = True
         Me.dgClientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.CornflowerBlue
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        Me.dgClientes.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.LightSalmon
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        Me.dgClientes.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgClientes.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.dgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgClientes.Size = New System.Drawing.Size(754, 188)
+        Me.dgClientes.Size = New System.Drawing.Size(754, 190)
         Me.dgClientes.TabIndex = 40
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label6.Location = New System.Drawing.Point(629, 23)
+        Me.Label6.Font = New System.Drawing.Font("Consolas", 9.75!)
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(647, 41)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(90, 20)
+        Me.Label6.Size = New System.Drawing.Size(70, 15)
         Me.Label6.TabIndex = 61
         Me.Label6.Text = "Codigo QR"
         '
         'btnCambiarConfiabilidad
         '
-        Me.btnCambiarConfiabilidad.BackColor = System.Drawing.Color.Blue
+        Me.btnCambiarConfiabilidad.BackColor = System.Drawing.Color.DarkTurquoise
         Me.btnCambiarConfiabilidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCambiarConfiabilidad.Font = New System.Drawing.Font("Century Gothic", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCambiarConfiabilidad.Font = New System.Drawing.Font("Consolas", 10.25!)
         Me.btnCambiarConfiabilidad.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.btnCambiarConfiabilidad.Location = New System.Drawing.Point(319, 204)
+        Me.btnCambiarConfiabilidad.Location = New System.Drawing.Point(599, 404)
         Me.btnCambiarConfiabilidad.Name = "btnCambiarConfiabilidad"
-        Me.btnCambiarConfiabilidad.Size = New System.Drawing.Size(200, 36)
+        Me.btnCambiarConfiabilidad.Size = New System.Drawing.Size(154, 33)
         Me.btnCambiarConfiabilidad.TabIndex = 49
         Me.btnCambiarConfiabilidad.Text = "Cambiar estado"
         Me.btnCambiarConfiabilidad.UseVisualStyleBackColor = False
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(601, 212)
+        Me.txtBuscar.Location = New System.Drawing.Point(529, 201)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(150, 20)
+        Me.txtBuscar.Size = New System.Drawing.Size(223, 20)
         Me.txtBuscar.TabIndex = 63
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.CQR.UI.LOCAL.My.Resources.Resources.magnifier
-        Me.PictureBox1.Location = New System.Drawing.Point(757, 209)
+        Me.PictureBox1.Location = New System.Drawing.Point(758, 198)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(27, 31)
         Me.PictureBox1.TabIndex = 64
@@ -321,7 +320,7 @@ Partial Class frmClientes
         Me.QrCodeImgControl1.ErrorImage = Global.CQR.UI.LOCAL.My.Resources.Resources.Coyote_Car_Wash_final_RGB
         Me.QrCodeImgControl1.Image = CType(resources.GetObject("QrCodeImgControl1.Image"), System.Drawing.Image)
         Me.QrCodeImgControl1.InitialImage = Global.CQR.UI.LOCAL.My.Resources.Resources.Coyote_Car_Wash_final_RGB
-        Me.QrCodeImgControl1.Location = New System.Drawing.Point(614, 46)
+        Me.QrCodeImgControl1.Location = New System.Drawing.Point(616, 59)
         Me.QrCodeImgControl1.Name = "QrCodeImgControl1"
         Me.QrCodeImgControl1.QuietZoneModule = Gma.QrCodeNet.Encoding.Windows.Render.QuietZoneModules.Two
         Me.QrCodeImgControl1.Size = New System.Drawing.Size(130, 122)
@@ -333,7 +332,7 @@ Partial Class frmClientes
         'btnActualizarForm
         '
         Me.btnActualizarForm.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473957601_InterfaceExpendet_01
-        Me.btnActualizarForm.Location = New System.Drawing.Point(525, 204)
+        Me.btnActualizarForm.Location = New System.Drawing.Point(453, 193)
         Me.btnActualizarForm.Name = "btnActualizarForm"
         Me.btnActualizarForm.Size = New System.Drawing.Size(31, 36)
         Me.btnActualizarForm.TabIndex = 60
@@ -342,7 +341,7 @@ Partial Class frmClientes
         'btnEliminar
         '
         Me.btnEliminar.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473950306_edit_delete
-        Me.btnEliminar.Location = New System.Drawing.Point(562, 204)
+        Me.btnEliminar.Location = New System.Drawing.Point(490, 193)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(33, 36)
         Me.btnEliminar.TabIndex = 42
@@ -354,13 +353,14 @@ Partial Class frmClientes
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(814, 447)
+        Me.Controls.Add(Me.btnCambiarConfiabilidad)
+        Me.Controls.Add(Me.btnActualizar)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.dgClientes)
         Me.Controls.Add(Me.txtBuscar)
-        Me.Controls.Add(Me.btnCambiarConfiabilidad)
         Me.Controls.Add(Me.QrCodeImgControl1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.btnActualizarForm)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)

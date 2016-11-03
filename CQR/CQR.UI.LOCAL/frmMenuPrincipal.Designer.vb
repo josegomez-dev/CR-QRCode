@@ -24,8 +24,7 @@ Partial Class frmMenuPrincipal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMenuPrincipal))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnClientes = New System.Windows.Forms.Button()
         Me.PictureBox1 = New AForge.Controls.PictureBox()
         Me.btnSeguridad = New System.Windows.Forms.Button()
@@ -58,8 +57,7 @@ Partial Class frmMenuPrincipal
         Me.SplitContainer1.Panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.SplitContainer1.Panel1.AllowDrop = True
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.White
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label2)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btnSalir)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnClientes)
         Me.SplitContainer1.Panel1.Controls.Add(Me.PictureBox1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSeguridad)
@@ -79,38 +77,28 @@ Partial Class frmMenuPrincipal
         Me.SplitContainer1.SplitterDistance = 225
         Me.SplitContainer1.TabIndex = 3
         '
-        'Label2
+        'btnSalir
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.Color.Firebrick
-        Me.Label2.Location = New System.Drawing.Point(74, 415)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 23)
-        Me.Label2.TabIndex = 14
-        Me.Label2.Text = "< SALIR"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.Firebrick
-        Me.Label1.Location = New System.Drawing.Point(67, 194)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 23)
-        Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Century"
+        Me.btnSalir.BackColor = System.Drawing.Color.Black
+        Me.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalir.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
+        Me.btnSalir.Location = New System.Drawing.Point(0, 391)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(225, 56)
+        Me.btnSalir.TabIndex = 13
+        Me.btnSalir.Text = "SALIR"
+        Me.btnSalir.UseVisualStyleBackColor = False
         '
         'btnClientes
         '
-        Me.btnClientes.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnClientes.BackColor = System.Drawing.Color.OrangeRed
         Me.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClientes.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClientes.ForeColor = System.Drawing.Color.White
-        Me.btnClientes.Location = New System.Drawing.Point(0, 274)
+        Me.btnClientes.Location = New System.Drawing.Point(0, 262)
         Me.btnClientes.Name = "btnClientes"
         Me.btnClientes.Size = New System.Drawing.Size(225, 35)
         Me.btnClientes.TabIndex = 0
@@ -119,21 +107,22 @@ Partial Class frmMenuPrincipal
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.CQR.UI.LOCAL.My.Resources.Resources.Coyote_Car_Wash_final_RGB
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 28)
+        Me.PictureBox1.Image = Global.CQR.UI.LOCAL.My.Resources.Resources.Chef_Software_Inc__company_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 39)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(202, 163)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
         'btnSeguridad
         '
-        Me.btnSeguridad.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnSeguridad.BackColor = System.Drawing.Color.OrangeRed
         Me.btnSeguridad.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSeguridad.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSeguridad.ForeColor = System.Drawing.Color.White
-        Me.btnSeguridad.Location = New System.Drawing.Point(0, 370)
+        Me.btnSeguridad.Location = New System.Drawing.Point(0, 358)
         Me.btnSeguridad.Name = "btnSeguridad"
         Me.btnSeguridad.Size = New System.Drawing.Size(225, 35)
         Me.btnSeguridad.TabIndex = 11
@@ -144,22 +133,22 @@ Partial Class frmMenuPrincipal
         '
         Me.lblNombreEmpresa.AutoSize = True
         Me.lblNombreEmpresa.BackColor = System.Drawing.Color.Transparent
-        Me.lblNombreEmpresa.Font = New System.Drawing.Font("Century Schoolbook", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombreEmpresa.Font = New System.Drawing.Font("Century Gothic", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNombreEmpresa.ForeColor = System.Drawing.Color.Maroon
-        Me.lblNombreEmpresa.Location = New System.Drawing.Point(54, 217)
+        Me.lblNombreEmpresa.Location = New System.Drawing.Point(60, 205)
         Me.lblNombreEmpresa.Name = "lblNombreEmpresa"
-        Me.lblNombreEmpresa.Size = New System.Drawing.Size(118, 25)
+        Me.lblNombreEmpresa.Size = New System.Drawing.Size(107, 23)
         Me.lblNombreEmpresa.TabIndex = 7
         Me.lblNombreEmpresa.Text = "LAVACAR"
         '
         'btnEmpresa
         '
-        Me.btnEmpresa.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnEmpresa.BackColor = System.Drawing.Color.OrangeRed
         Me.btnEmpresa.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEmpresa.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEmpresa.ForeColor = System.Drawing.Color.White
-        Me.btnEmpresa.Location = New System.Drawing.Point(0, 306)
+        Me.btnEmpresa.Location = New System.Drawing.Point(0, 294)
         Me.btnEmpresa.Name = "btnEmpresa"
         Me.btnEmpresa.Size = New System.Drawing.Size(225, 35)
         Me.btnEmpresa.TabIndex = 5
@@ -168,7 +157,7 @@ Partial Class frmMenuPrincipal
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.Firebrick
+        Me.ToolStrip1.BackColor = System.Drawing.Color.OrangeRed
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator3, Me.btnRegistrarCliente, Me.ToolStripLabel1, Me.ToolStripSeparator1, Me.btnEscanerCodigo, Me.ToolStripLabel2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -218,12 +207,12 @@ Partial Class frmMenuPrincipal
         '
         'btnReportes
         '
-        Me.btnReportes.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnReportes.BackColor = System.Drawing.Color.OrangeRed
         Me.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReportes.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReportes.ForeColor = System.Drawing.Color.White
-        Me.btnReportes.Location = New System.Drawing.Point(0, 338)
+        Me.btnReportes.Location = New System.Drawing.Point(0, 326)
         Me.btnReportes.Name = "btnReportes"
         Me.btnReportes.Size = New System.Drawing.Size(225, 35)
         Me.btnReportes.TabIndex = 6
@@ -259,7 +248,6 @@ Partial Class frmMenuPrincipal
     Friend WithEvents PictureBox1 As AForge.Controls.PictureBox
     Friend WithEvents btnSeguridad As Button
     Friend WithEvents btnReportes As Button
-    Friend WithEvents Label1 As Label
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents btnEscanerCodigo As ToolStripButton
@@ -267,5 +255,5 @@ Partial Class frmMenuPrincipal
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents ToolStripLabel2 As ToolStripLabel
-    Friend WithEvents Label2 As Label
+    Friend WithEvents btnSalir As Button
 End Class

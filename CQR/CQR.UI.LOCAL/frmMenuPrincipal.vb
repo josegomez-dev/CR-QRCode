@@ -61,7 +61,15 @@ Public Class frmMenuPrincipal
         form.Show()
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub btnReportes_Click(sender As Object, e As EventArgs) Handles btnReportes.Click
+        showScreen(New frmReporteVentas)
+    End Sub
+
+    Private Sub btnSeguridad_Click(sender As Object, e As EventArgs) Handles btnSeguridad.Click
+        showScreen(New frmSeguridad)
+    End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Select Case MsgBox("Desea cerrar la aplicacion?", MsgBoxStyle.YesNoCancel, "Confirmar accion")
             Case MsgBoxResult.Yes
                 Me.Close()
@@ -69,9 +77,5 @@ Public Class frmMenuPrincipal
                 MessageBox.Show("Cancel action")
             Case MsgBoxResult.No
         End Select
-    End Sub
-
-    Private Sub btnReportes_Click(sender As Object, e As EventArgs) Handles btnReportes.Click
-        showScreen(New frmReporteVentas)
     End Sub
 End Class

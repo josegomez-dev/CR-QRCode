@@ -48,6 +48,9 @@ Partial Class frmEscaner
         'cmbDispositivos
         '
         Me.cmbDispositivos.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.cmbDispositivos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbDispositivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmbDispositivos.ForeColor = System.Drawing.Color.OrangeRed
         Me.cmbDispositivos.FormattingEnabled = True
         Me.cmbDispositivos.Location = New System.Drawing.Point(32, 46)
         Me.cmbDispositivos.Name = "cmbDispositivos"
@@ -57,7 +60,9 @@ Partial Class frmEscaner
         'lblEscaner
         '
         Me.lblEscaner.AutoSize = True
+        Me.lblEscaner.BackColor = System.Drawing.Color.Transparent
         Me.lblEscaner.Font = New System.Drawing.Font("Century Gothic", 10.25!)
+        Me.lblEscaner.ForeColor = System.Drawing.Color.DarkTurquoise
         Me.lblEscaner.Location = New System.Drawing.Point(204, 24)
         Me.lblEscaner.Name = "lblEscaner"
         Me.lblEscaner.Size = New System.Drawing.Size(258, 19)
@@ -66,26 +71,26 @@ Partial Class frmEscaner
         '
         'btnIniciar
         '
-        Me.btnIniciar.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnIniciar.BackColor = System.Drawing.Color.DarkTurquoise
         Me.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnIniciar.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIniciar.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.btnIniciar.Location = New System.Drawing.Point(65, 328)
+        Me.btnIniciar.Font = New System.Drawing.Font("Consolas", 10.25!)
+        Me.btnIniciar.ForeColor = System.Drawing.Color.White
+        Me.btnIniciar.Location = New System.Drawing.Point(170, 308)
         Me.btnIniciar.Name = "btnIniciar"
-        Me.btnIniciar.Size = New System.Drawing.Size(181, 36)
+        Me.btnIniciar.Size = New System.Drawing.Size(126, 36)
         Me.btnIniciar.TabIndex = 18
         Me.btnIniciar.Text = "Escanear"
         Me.btnIniciar.UseVisualStyleBackColor = False
         '
         'btnDetener
         '
-        Me.btnDetener.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnDetener.BackColor = System.Drawing.Color.DarkTurquoise
         Me.btnDetener.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDetener.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDetener.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.btnDetener.Location = New System.Drawing.Point(252, 328)
+        Me.btnDetener.Font = New System.Drawing.Font("Consolas", 10.25!)
+        Me.btnDetener.ForeColor = System.Drawing.Color.White
+        Me.btnDetener.Location = New System.Drawing.Point(316, 308)
         Me.btnDetener.Name = "btnDetener"
-        Me.btnDetener.Size = New System.Drawing.Size(181, 36)
+        Me.btnDetener.Size = New System.Drawing.Size(126, 36)
         Me.btnDetener.TabIndex = 19
         Me.btnDetener.Text = "Detener"
         Me.btnDetener.UseVisualStyleBackColor = False
@@ -94,8 +99,8 @@ Partial Class frmEscaner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(495, 383)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(495, 357)
         Me.Controls.Add(Me.btnDetener)
         Me.Controls.Add(Me.btnIniciar)
         Me.Controls.Add(Me.cmbDispositivos)

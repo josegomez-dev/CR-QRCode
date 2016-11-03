@@ -125,6 +125,12 @@
     <Compile Include="frmRegistrarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSeguridad.Designer.vb">
+      <DependentUpon>frmSeguridad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeguridad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSeleccionServicio.Designer.vb">
       <DependentUpon>frmSeleccionServicio.vb</DependentUpon>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarCliente.resx">
       <DependentUpon>frmRegistrarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeguridad.resx">
+      <DependentUpon>frmSeguridad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSeleccionServicio.resx">
       <DependentUpon>frmSeleccionServicio.vb</DependentUpon>
@@ -246,6 +255,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\magnifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chef_Software_Inc._company_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
