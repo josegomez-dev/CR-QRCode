@@ -18,11 +18,11 @@ namespace CQR.API.CORE.Gestores
             _crudFactory = new ReporteVentasCrudFactory();
         }
 
-        public void Create(ReporteVentas servicio)
+        public void Create(ReporteVentas entidad)
         {
-            if (!string.IsNullOrEmpty(Convert.ToString(servicio.Id)))
+            if (!string.IsNullOrEmpty(Convert.ToString(entidad.Id)))
             {
-                _crudFactory.Create(servicio);
+                _crudFactory.Create(entidad);
             }
             else
             {
@@ -30,11 +30,11 @@ namespace CQR.API.CORE.Gestores
             }
         }
 
-        public void Update(Servicio servicio)
+        public void Update(Servicio entidad)
         {
-            if (!string.IsNullOrEmpty(Convert.ToString(servicio.Id)))
+            if (!string.IsNullOrEmpty(Convert.ToString(entidad.Id)))
             {
-                _crudFactory.Update(servicio);
+                _crudFactory.Update(entidad);
             }
             else
             {
@@ -43,11 +43,11 @@ namespace CQR.API.CORE.Gestores
 
         }
 
-        public void Delete(ReporteVentas servicio)
+        public void Delete(ReporteVentas entidad)
         {
-            if (!string.IsNullOrEmpty(Convert.ToString(servicio.Id)))
+            if (!string.IsNullOrEmpty(Convert.ToString(entidad.Id)))
             {
-                _crudFactory.Delete(servicio);
+                _crudFactory.Delete(entidad);
             }
             else
             {
@@ -58,9 +58,9 @@ namespace CQR.API.CORE.Gestores
 
         public ReporteVentas RetrievePorId(string id)
         {
-            var servicio = new Servicio { Id = Convert.ToInt32(id) };
+            var entidad = new Servicio { Id = Convert.ToInt32(id) };
 
-            return _crudFactory.Retrieve<ReporteVentas>(Convert.ToString(servicio.Id));
+            return _crudFactory.Retrieve<ReporteVentas>(Convert.ToString(entidad.Id));
         }
 
         public List<ReporteVentas> RetrieveAll()

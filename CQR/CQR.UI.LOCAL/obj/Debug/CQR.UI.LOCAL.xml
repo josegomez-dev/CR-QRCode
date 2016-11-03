@@ -57,6 +57,11 @@ CQR.UI.LOCAL
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:CQR.UI.LOCAL.My.Resources.Resources.Chef_Software_Inc__company_logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:CQR.UI.LOCAL.My.Resources.Resources.colori_1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -45,7 +45,9 @@
     <Compile Include="CRUD\ClienteCrudFactory.cs" />
     <Compile Include="CRUD\EmpresaCrudFactory.cs" />
     <Compile Include="CRUD\MensajeCrudFactory.cs" />
+    <Compile Include="CRUD\PermisoCrudFactory.cs" />
     <Compile Include="CRUD\ReporteVentasCrudFactory.cs" />
+    <Compile Include="CRUD\RolCrudFactory.cs" />
     <Compile Include="CRUD\ServicioCrudFactory.cs" />
     <Compile Include="DAO\SqlDao.cs" />
     <Compile Include="DAO\SqlOperation.cs" />
@@ -56,8 +58,12 @@
     <Compile Include="Mapper\ClienteMapper.cs" />
     <Compile Include="Mapper\EmpresaMapper.cs" />
     <Compile Include="Mapper\MensajeMapper.cs" />
+    <Compile Include="Mapper\PermisoMapper.cs" />
     <Compile Include="Mapper\ReporteVentasMapper.cs" />
+    <Compile Include="Mapper\RolMapper.cs" />
     <Compile Include="Mapper\ServicioMapper.cs" />
+    <Compile Include="CRUD\UsuarioCrudFactory.cs" />
+    <Compile Include="Mapper\UsuarioMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

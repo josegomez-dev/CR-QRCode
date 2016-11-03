@@ -13,6 +13,7 @@ namespace CQR.API.CORE.Gestores
     public class GestorCliente : GestorAPI
     {
         private ClienteCrudFactory _crudFactory;
+
         public GestorCliente(Usuario usuario) : base(usuario)
         {
             _crudFactory = new ClienteCrudFactory();
@@ -114,5 +115,6 @@ namespace CQR.API.CORE.Gestores
         {
             return _crudFactory.SearchLike<Cliente>(text);
         }
+
     }
 }

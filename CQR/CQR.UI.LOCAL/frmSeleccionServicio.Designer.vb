@@ -48,27 +48,27 @@ Partial Class frmSeleccionServicio
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.OrangeRed
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgServicios.DefaultCellStyle = DataGridViewCellStyle1
-        Me.dgServicios.GridColor = System.Drawing.Color.DarkBlue
-        Me.dgServicios.Location = New System.Drawing.Point(23, 84)
+        Me.dgServicios.GridColor = System.Drawing.Color.White
+        Me.dgServicios.Location = New System.Drawing.Point(23, 100)
         Me.dgServicios.Name = "dgServicios"
         Me.dgServicios.ReadOnly = True
         Me.dgServicios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.CornflowerBlue
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSalmon
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
         Me.dgServicios.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgServicios.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.dgServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgServicios.Size = New System.Drawing.Size(476, 148)
+        Me.dgServicios.Size = New System.Drawing.Size(453, 148)
         Me.dgServicios.TabIndex = 65
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(316, 58)
+        Me.txtBuscar.Location = New System.Drawing.Point(293, 76)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(150, 20)
         Me.txtBuscar.TabIndex = 70
@@ -77,8 +77,8 @@ Partial Class frmSeleccionServicio
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label1.Location = New System.Drawing.Point(173, 9)
+        Me.Label1.ForeColor = System.Drawing.Color.OrangeRed
+        Me.Label1.Location = New System.Drawing.Point(160, 17)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(161, 24)
         Me.Label1.TabIndex = 66
@@ -88,7 +88,7 @@ Partial Class frmSeleccionServicio
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.CQR.UI.LOCAL.My.Resources.Resources.magnifier
-        Me.PictureBox1.Location = New System.Drawing.Point(472, 55)
+        Me.PictureBox1.Location = New System.Drawing.Point(449, 73)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(27, 31)
         Me.PictureBox1.TabIndex = 71
@@ -96,24 +96,24 @@ Partial Class frmSeleccionServicio
         '
         'btnEnviar
         '
-        Me.btnEnviar.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnEnviar.BackColor = System.Drawing.Color.DarkTurquoise
         Me.btnEnviar.Enabled = False
         Me.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEnviar.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEnviar.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.btnEnviar.Location = New System.Drawing.Point(23, 397)
+        Me.btnEnviar.Font = New System.Drawing.Font("Consolas", 10.25!)
+        Me.btnEnviar.ForeColor = System.Drawing.Color.White
+        Me.btnEnviar.Location = New System.Drawing.Point(118, 356)
         Me.btnEnviar.Name = "btnEnviar"
-        Me.btnEnviar.Size = New System.Drawing.Size(476, 36)
+        Me.btnEnviar.Size = New System.Drawing.Size(271, 33)
         Me.btnEnviar.TabIndex = 72
-        Me.btnEnviar.Text = "Seleccionar Servicio"
+        Me.btnEnviar.Text = "Reportar Venta"
         Me.btnEnviar.UseVisualStyleBackColor = False
         '
         'lblServicioSeleccionad
         '
         Me.lblServicioSeleccionad.AutoSize = True
         Me.lblServicioSeleccionad.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblServicioSeleccionad.ForeColor = System.Drawing.SystemColors.Info
-        Me.lblServicioSeleccionad.Location = New System.Drawing.Point(224, 250)
+        Me.lblServicioSeleccionad.ForeColor = System.Drawing.Color.Black
+        Me.lblServicioSeleccionad.Location = New System.Drawing.Point(231, 268)
         Me.lblServicioSeleccionad.Name = "lblServicioSeleccionad"
         Me.lblServicioSeleccionad.Size = New System.Drawing.Size(23, 17)
         Me.lblServicioSeleccionad.TabIndex = 73
@@ -123,8 +123,8 @@ Partial Class frmSeleccionServicio
         '
         Me.lblCliente.AutoSize = True
         Me.lblCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCliente.ForeColor = System.Drawing.SystemColors.Info
-        Me.lblCliente.Location = New System.Drawing.Point(224, 278)
+        Me.lblCliente.ForeColor = System.Drawing.Color.Black
+        Me.lblCliente.Location = New System.Drawing.Point(231, 296)
         Me.lblCliente.Name = "lblCliente"
         Me.lblCliente.Size = New System.Drawing.Size(23, 17)
         Me.lblCliente.TabIndex = 74
@@ -134,8 +134,8 @@ Partial Class frmSeleccionServicio
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label2.Location = New System.Drawing.Point(160, 250)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(167, 268)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 17)
         Me.Label2.TabIndex = 75
@@ -145,8 +145,8 @@ Partial Class frmSeleccionServicio
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label3.Location = New System.Drawing.Point(163, 278)
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(170, 296)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 17)
         Me.Label3.TabIndex = 76
@@ -156,8 +156,8 @@ Partial Class frmSeleccionServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlText
-        Me.ClientSize = New System.Drawing.Size(522, 453)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(500, 414)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblCliente)

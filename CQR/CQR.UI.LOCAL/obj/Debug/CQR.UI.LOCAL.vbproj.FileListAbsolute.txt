@@ -114,3 +114,4 @@ C:\Users\alego\Documents\GitHub\CR-QRCode\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCA
 C:\Users\alego\Documents\GitHub\CR-QRCode\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCAL.vbproj.GenerateResource.Cache
 C:\Users\alego\Documents\GitHub\CR-QRCode\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCAL.frmReporteVentas.resources
 C:\Users\alego\Documents\GitHub\CR-QRCode\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCAL.frmSeleccionServicio.resources
+C:\Users\alego\Documents\GitHub\CR-QRCode\CQR\CQR.UI.LOCAL\obj\Debug\CQR.UI.LOCAL.frmSeguridad.resources
