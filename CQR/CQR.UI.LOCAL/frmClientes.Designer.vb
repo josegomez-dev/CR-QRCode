@@ -22,15 +22,14 @@ Partial Class frmClientes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmClientes))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtProfesion = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtPlaca = New System.Windows.Forms.TextBox()
-        Me.btnActualizar = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -41,6 +40,7 @@ Partial Class frmClientes
         Me.txtVisitas = New System.Windows.Forms.NumericUpDown()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.txtCorreo = New System.Windows.Forms.TextBox()
+        Me.btnActualizar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgClientes = New System.Windows.Forms.DataGridView()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -50,6 +50,7 @@ Partial Class frmClientes
         Me.QrCodeImgControl1 = New Gma.QrCodeNet.Encoding.Windows.Forms.QrCodeImgControl()
         Me.btnActualizarForm = New AForge.Controls.PictureBox()
         Me.btnEliminar = New AForge.Controls.PictureBox()
+        Me.btnVisitaManual = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.txtPremio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtVisitas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,7 +77,7 @@ Partial Class frmClientes
         Me.GroupBox1.Controls.Add(Me.txtVisitas)
         Me.GroupBox1.Controls.Add(Me.txtTelefono)
         Me.GroupBox1.Controls.Add(Me.txtCorreo)
-        Me.GroupBox1.ForeColor = System.Drawing.Color.DarkTurquoise
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(31, 27)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(531, 125)
@@ -121,19 +122,6 @@ Partial Class frmClientes
         Me.txtPlaca.Name = "txtPlaca"
         Me.txtPlaca.Size = New System.Drawing.Size(154, 13)
         Me.txtPlaca.TabIndex = 50
-        '
-        'btnActualizar
-        '
-        Me.btnActualizar.BackColor = System.Drawing.Color.DarkTurquoise
-        Me.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnActualizar.Font = New System.Drawing.Font("Consolas", 10.25!)
-        Me.btnActualizar.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.btnActualizar.Location = New System.Drawing.Point(407, 143)
-        Me.btnActualizar.Name = "btnActualizar"
-        Me.btnActualizar.Size = New System.Drawing.Size(125, 33)
-        Me.btnActualizar.TabIndex = 48
-        Me.btnActualizar.Text = "Actualizar Informacion"
-        Me.btnActualizar.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -232,11 +220,24 @@ Partial Class frmClientes
         Me.txtCorreo.Size = New System.Drawing.Size(154, 13)
         Me.txtCorreo.TabIndex = 32
         '
+        'btnActualizar
+        '
+        Me.btnActualizar.BackColor = System.Drawing.Color.DarkTurquoise
+        Me.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnActualizar.Font = New System.Drawing.Font("Consolas", 10.25!)
+        Me.btnActualizar.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btnActualizar.Location = New System.Drawing.Point(407, 143)
+        Me.btnActualizar.Name = "btnActualizar"
+        Me.btnActualizar.Size = New System.Drawing.Size(135, 30)
+        Me.btnActualizar.TabIndex = 48
+        Me.btnActualizar.Text = "Actualizar Informacion"
+        Me.btnActualizar.UseVisualStyleBackColor = False
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.OrangeRed
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(28, 198)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(146, 21)
@@ -250,23 +251,23 @@ Partial Class frmClientes
         Me.dgClientes.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.dgClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken
         Me.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.OrangeRed
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgClientes.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.OrangeRed
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgClientes.DefaultCellStyle = DataGridViewCellStyle5
         Me.dgClientes.GridColor = System.Drawing.Color.White
         Me.dgClientes.Location = New System.Drawing.Point(31, 222)
         Me.dgClientes.Name = "dgClientes"
         Me.dgClientes.ReadOnly = True
         Me.dgClientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.LightSalmon
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        Me.dgClientes.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.LightSalmon
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        Me.dgClientes.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dgClientes.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.dgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgClientes.Size = New System.Drawing.Size(754, 190)
@@ -277,7 +278,7 @@ Partial Class frmClientes
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Consolas", 9.75!)
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(647, 41)
+        Me.Label6.Location = New System.Drawing.Point(648, 27)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 15)
         Me.Label6.TabIndex = 61
@@ -320,7 +321,7 @@ Partial Class frmClientes
         Me.QrCodeImgControl1.ErrorImage = Global.CQR.UI.LOCAL.My.Resources.Resources.Coyote_Car_Wash_final_RGB
         Me.QrCodeImgControl1.Image = CType(resources.GetObject("QrCodeImgControl1.Image"), System.Drawing.Image)
         Me.QrCodeImgControl1.InitialImage = Global.CQR.UI.LOCAL.My.Resources.Resources.Coyote_Car_Wash_final_RGB
-        Me.QrCodeImgControl1.Location = New System.Drawing.Point(616, 59)
+        Me.QrCodeImgControl1.Location = New System.Drawing.Point(617, 45)
         Me.QrCodeImgControl1.Name = "QrCodeImgControl1"
         Me.QrCodeImgControl1.QuietZoneModule = Gma.QrCodeNet.Encoding.Windows.Render.QuietZoneModules.Two
         Me.QrCodeImgControl1.Size = New System.Drawing.Size(130, 122)
@@ -347,11 +348,24 @@ Partial Class frmClientes
         Me.btnEliminar.TabIndex = 42
         Me.btnEliminar.TabStop = False
         '
+        'btnVisitaManual
+        '
+        Me.btnVisitaManual.BackColor = System.Drawing.Color.Transparent
+        Me.btnVisitaManual.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVisitaManual.Font = New System.Drawing.Font("Consolas", 10.25!)
+        Me.btnVisitaManual.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.btnVisitaManual.Image = Global.CQR.UI.LOCAL.My.Resources.Resources._1473947706_6
+        Me.btnVisitaManual.Location = New System.Drawing.Point(407, 193)
+        Me.btnVisitaManual.Name = "btnVisitaManual"
+        Me.btnVisitaManual.Size = New System.Drawing.Size(36, 33)
+        Me.btnVisitaManual.TabIndex = 65
+        Me.btnVisitaManual.UseVisualStyleBackColor = False
+        '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(814, 447)
         Me.Controls.Add(Me.btnCambiarConfiabilidad)
         Me.Controls.Add(Me.btnActualizar)
@@ -364,6 +378,7 @@ Partial Class frmClientes
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnVisitaManual)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmClientes"
         Me.Text = "frmClientes"
@@ -405,4 +420,5 @@ Partial Class frmClientes
     Friend WithEvents txtProfesion As TextBox
     Friend WithEvents txtBuscar As TextBox
     Friend WithEvents PictureBox1 As AForge.Controls.PictureBox
+    Friend WithEvents btnVisitaManual As Button
 End Class

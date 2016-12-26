@@ -241,4 +241,7 @@ Public Class frmClientes
 
     End Sub
 
+    Private Sub btnVisitaManual_Click(sender As Object, e As EventArgs) Handles btnVisitaManual.Click
+
+    End Sub
 End Class
